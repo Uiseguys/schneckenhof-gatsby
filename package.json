@@ -15,6 +15,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "gatsby build",
     "extract": "cross-env BABEL_ENV=extract lingui extract --clean"
   },
   "dependencies": {
