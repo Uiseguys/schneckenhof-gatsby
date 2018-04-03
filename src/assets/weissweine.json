@@ -1,0 +1,153 @@
+{
+    "whiteWines": {
+        "title": "Weißweine",
+        "list": [
+            {
+                "id": "tl1",
+                "image": "rot_liter.jpg",
+                "name": "Trollinger mit Lemberger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 1,
+                "unitOfMeasurement": "LTR",
+                "price": 4.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            },
+            {
+                "id": "l1",
+                "image": "rot_liter.jpg",
+                "name": "Lemberger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 0.75,
+                "unitOfMeasurement": "LTR",
+                "price": 5.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            },
+            {
+                "id": "t1",
+                "image": "rot_liter.jpg",
+                "name": "Trollinger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 0.75,
+                "unitOfMeasurement": "LTR",
+                "price": 4.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            },
+            {
+                "id": "t2",
+                "image": "rot_liter.jpg",
+                "name": "Trollinger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 0.75,
+                "unitOfMeasurement": "LTR",
+                "price": 4.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            },
+            {
+                "id": "l2",
+                "image": "rot_liter.jpg",
+                "name": "Lemberger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 0.75,
+                "unitOfMeasurement": "LTR",
+                "price": 6.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            }
+        ]
+    },
+    "whitePremiumWines": {
+        "title": "Premium Weißweine",
+        "list": [
+            {
+                "id": "tl1",
+                "image": "rot_liter.jpg",
+                "name": "Trollinger mit Lemberger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 1,
+                "unitOfMeasurement": "LTR",
+                "price": 4.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            },
+            {
+                "id": "l1",
+                "image": "rot_liter.jpg",
+                "name": "Lemberger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 0.75,
+                "unitOfMeasurement": "LTR",
+                "price": 5.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            },
+            {
+                "id": "t1",
+                "image": "rot_liter.jpg",
+                "name": "Trollinger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 0.75,
+                "unitOfMeasurement": "LTR",
+                "price": 4.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            },
+            {
+                "id": "t2",
+                "image": "rot_liter.jpg",
+                "name": "Trollinger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 0.75,
+                "unitOfMeasurement": "LTR",
+                "price": 4.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            },
+            {
+                "id": "l2",
+                "image": "rot_liter.jpg",
+                "name": "Lemberger",
+                "varietal": "",
+                "vintage": "",
+                "availability": "available",
+                "content": 0.75,
+                "unitOfMeasurement": "LTR",
+                "price": 6.40,
+                "priceCurrency": "EUR",
+                "awardText": "",
+                "awardLevel": ""
+            }
+        ]
+    }
+}
+

@@ -5,22 +5,20 @@ import { I18nProvider, withI18n, Trans } from '@lingui/react'
 import { navigateTo } from 'gatsby-link'
 import Header from '../components/Header'
 import { catalogs, prefix, deprefix, langFromPath } from '../i18n-config'
-import './index.css'
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import '../scss/style.scss'
+import '../assets/icons/style.css'
 
 const TemplateWrapper = ({ children, lang, onLangChange }) => (
   <div>
     <Helmet title='Gatsby Default Starter' meta={[ { name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' } ]} />
-    <Header lang={lang} onLangClick={onLangChange} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0
-      }}
-    >
+    <Navigation />
+    <div>
       {children()}
     </div>
+
+    <Footer />
   </div>
 )
 
