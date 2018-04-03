@@ -10,6 +10,19 @@ import wines from '../assets/images/wines.jpg'
 import party1 from '../assets/images/party1.jpg'
 import restaurant from '../assets/images/restaurant.jpg'
 
+import config from './index.json'
+
+const Teaser = (props) => (
+  <div class='teaser'>
+    <div class='icon'>
+      <span className={'icon-i_' + props.data.icon} />
+    </div>
+    <h2>{props.data.title}</h2>
+    <h3>{props.data.subtitle}</h3>
+    <p>{props.data.text} </p>
+  </div>
+)
+
 const IndexPage = ({ i18n }) => (
   <div className='startseite content-container'>
     <header>
@@ -24,30 +37,41 @@ const IndexPage = ({ i18n }) => (
 
     <section>
       <div className='image' style={{ backgroundImage: `url(${family})` }} />
-      <div />
+      <Teaser data={config.index.teaser.vineyard} />
     </section>
 
     <section className='reverse'>
       <div className='image' style={{ backgroundImage: `url(${grapes})` }} />
-      <div />
+      <Teaser data={config.index.teaser.grapes} />
     </section>
 
     <section>
       <div className='image' style={{ backgroundImage: `url(${wines})` }} />
-      <div className='cta'>
-        <a href='weine'>Mehr über unsere Weine</a>
+      <div>
+        <Teaser data={config.index.teaser.wines} />
+        <div class='cta'>
+          <a href='weine'>Mehr über unsere Weine</a>
+        </div>
       </div>
     </section>
 
     <section className='reverse'>
       <div className='image' style={{ backgroundImage: `url(${party1})` }} />
-      <div />
+      <div>
+        <Teaser data={config.index.teaser.events} />
+        <div class='cta'>
+          <a href='aktuelles'>Aktuelle Veranstaltungen</a>
+        </div>
+      </div>
     </section>
 
     <section>
       <div className='image' style={{ backgroundImage: `url(${restaurant})` }} />
-      <div className='cta'>
-        <a href='weine'>Mehr über unsere Weine</a>
+      <div>
+        <Teaser data={config.index.teaser.restaurant} />
+        <div class='cta'>
+          <a href='gasthaus'>Mehr über unser Gasthaus</a>
+        </div>
       </div>
     </section>
   </div>
