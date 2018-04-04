@@ -1,41 +1,41 @@
 import React from 'react'
 
 const Navigation  = () => (
-  <nav class="main-navigation">
+  <nav className="main-navigation">
 		<ul>
 			<li>
 				<a href="/">
-					<span class="icon-i_logo-05"></span>
-					<span class="label">Startseite</span>
+					<span className="icon-i_logo-05"></span>
+					<span className="label">Startseite</span>
 				</a>
 			</li>
 
-			<li class="active" >
+			<li className="active" >
 				<a href="/rotweine">
-					<span class="icon-i_bottles"></span>
-					<span class="label">Shop</span>
+					<span className="icon-i_bottles"></span>
+					<span className="label">Shop</span>
 				</a>
 			</li>
 
 
 			<li >
 				<a href="/weine">
-					<span class="icon-i_barrels"></span>
-					<span class="label">Wein-Kategorien</span>
+					<span className="icon-i_barrels"></span>
+					<span className="label">Wein-Kategorien</span>
 				</a>
 			</li>
 
 			<li >
 				<a href="/aktuelles">
-					<span class="icon-i_news"></span>
-					<span class="label">Aktuelles &amp; Termine</span>
+					<span className="icon-i_news"></span>
+					<span className="label">Aktuelles &amp; Termine</span>
 				</a>
 			</li>
 
 			<li >
 				<a href="/gasthaus">
-					<span class="icon-i_lamb"></span>
-					<span class="label">Gasthaus</span>
+					<span className="icon-i_lamb"></span>
+					<span className="label">Gasthaus</span>
 				</a>
 			</li>
 
