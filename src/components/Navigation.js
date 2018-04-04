@@ -26,7 +26,7 @@ const Navigation  = () => (
 			</li>
 
 			<li >
-				<a >
+				<a href="/aktuelles">
 					<span class="icon-i_news"></span>
 					<span class="label">Aktuelles &amp; Termine</span>
 				</a>
