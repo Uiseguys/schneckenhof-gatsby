@@ -19,7 +19,7 @@ const Navigation  = () => (
 
 
 			<li >
-				<a>
+				<a href="/weine">
 					<span class="icon-i_barrels"></span>
 					<span class="label">Wein-Kategorien</span>
 				</a>
@@ -33,7 +33,7 @@ const Navigation  = () => (
 			</li>
 
 			<li >
-				<a >
+				<a href="/gasthaus">
 					<span class="icon-i_lamb"></span>
 					<span class="label">Gasthaus</span>
 				</a>
