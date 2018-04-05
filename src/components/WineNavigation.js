@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { logo } from '../assets'
 
-const WineLink = ({ to, icon }) => (
+const WineLink = ({ to, icon, location}) => (
   <Link to={to}>
     <li className={location.pathname.startsWith(to) ? 'active' : ''}>
       <span className={icon}>

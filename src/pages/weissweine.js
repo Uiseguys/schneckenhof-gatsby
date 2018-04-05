@@ -6,11 +6,11 @@ import Wines from '../components/Wines'
 
 import { whiteWines, whitePremiumWines } from '../assets/weissweine.json'
 
-export default () => (
+export default ({location}) => (
   <div className='content-container'>
     <SubpageHeader />
 
-    <WineNavigation />
+    <WineNavigation location={location}/>
 
     <h2>{whiteWines.title}</h2>
     <Wines wines={whiteWines.list} />

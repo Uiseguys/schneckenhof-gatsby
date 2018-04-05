@@ -6,11 +6,11 @@ import Wines from '../components/Wines'
 
 import { sparklingWines, sparklingPremiumWines } from '../assets/sekt.json'
 
-export default () => (
+export default ({location}) => (
   <div className='content-container'>
     <SubpageHeader />
 
-    <WineNavigation />
+    <WineNavigation location={location}/>
 
     <h2>{sparklingWines.title}</h2>
     <Wines wines={sparklingWines.list} />
