@@ -2,151 +2,254 @@
     "redWines": {
         "title": "Rotweine",
         "list": [
+
             {
-                "id": "tl1",
-                "image": "rot_liter.jpg",
                 "name": "Trollinger mit Lemberger",
-                "varietal": "",
-                "vintage": "",
-                "availability": "available",
-                "content": 1,
-                "unitOfMeasurement": "LTR",
-                "price": 4.40,
-                "priceCurrency": "EUR",
+                "vintage": "2015",
+                "price": 5.30,
+
                 "awardText": "",
-                "awardLevel": ""
-            },
-            {
-                "id": "l1",
+                "awardLevel": "",
+
+                "id": "rot_01",
                 "image": "rot_liter.jpg",
-                "name": "Lemberger",
-                "varietal": "",
-                "vintage": "",
                 "availability": "available",
-                "content": 0.75,
+                "content":  1,
                 "unitOfMeasurement": "LTR",
-                "price": 5.40,
-                "priceCurrency": "EUR",
-                "awardText": "",
-                "awardLevel": ""
-            },
-            {
-                "id": "t1",
-                "image": "rot_liter.jpg",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
                 "name": "Trollinger",
-                "varietal": "",
-                "vintage": "",
-                "availability": "available",
-                "content": 0.75,
-                "unitOfMeasurement": "LTR",
-                "price": 4.40,
-                "priceCurrency": "EUR",
+                "vintage": "2015",
+                "price": 5.30,
+
                 "awardText": "",
-                "awardLevel": ""
-            },
-            {
-                "id": "t2",
+                "awardLevel": "",
+
+                "id": "rot_02",
                 "image": "rot_liter.jpg",
-                "name": "Trollinger",
-                "varietal": "",
-                "vintage": "",
                 "availability": "available",
-                "content": 0.75,
+                "content":  1,
                 "unitOfMeasurement": "LTR",
-                "price": 4.40,
-                "priceCurrency": "EUR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Trollinger trocken",
+                "vintage": "2015",
+                "price": 5.30,
+
                 "awardText": "",
-                "awardLevel": ""
-            },
-            {
-                "id": "l2",
+                "awardLevel": "",
+
+                "id": "rot_03",
                 "image": "rot_liter.jpg",
+                "availability": "available",
+                "content":  1,
+                "unitOfMeasurement": "LTR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Schwarzriesling",
+                "vintage": "2015",
+                "price": 5.30,
+
+                "awardText": "",
+                "awardLevel": "",
+
+                "id": "rot_04",
+                "image": "rot_liter.jpg",
+                "availability": "available",
+                "content":  1,
+                "unitOfMeasurement": "LTR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Trollinger mit Lemberger",
+                "vintage": "2016",
+                "price": 4.80,
+
+                "awardText": "",
+                "awardLevel": "",
+
+                "id": "rot_010",
+                "image": "rot.jpg",
+                "availability": "available",
+                "content":  0.75,
+                "unitOfMeasurement": "LTR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
                 "name": "Lemberger",
-                "varietal": "",
-                "vintage": "",
-                "availability": "available",
-                "content": 0.75,
-                "unitOfMeasurement": "LTR",
-                "price": 6.40,
-                "priceCurrency": "EUR",
+                "vintage": "2015",
+                "price": 5.60,
+
                 "awardText": "",
-                "awardLevel": ""
-            }
+                "awardLevel": "",
+
+                "id": "rot_011",
+                "image": "rot.jpg",
+                "availability": "available",
+                "content":  0.75,
+                "unitOfMeasurement": "LTR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Lemberger feinherb",
+                "vintage": "2015",
+                "price": 5.60,
+
+                "awardText": "",
+                "awardLevel": "",
+
+                "id": "rot_012",
+                "image": "rot.jpg",
+                "availability": "available",
+                "content":  0.75,
+                "unitOfMeasurement": "LTR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Lemberger trocken",
+                "vintage": "2015",
+                "price": 5.60,
+
+                "awardText": "",
+                "awardLevel": "",
+
+                "id": "rot_013",
+                "image": "rot.jpg",
+                "availability": "available",
+                "content":  0.75,
+                "unitOfMeasurement": "LTR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Dornfelder trocken",
+                "vintage": "2015",
+                "price": 5.30,
+
+                "awardText": "",
+                "awardLevel": "",
+
+                "id": "rot_014",
+                "image": "rot.jpg",
+                "availability": "available",
+                "content":  0.75,
+                "unitOfMeasurement": "LTR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Samtrot",
+                "vintage": "2015",
+                "price": 5.80,
+
+                "awardText": "",
+                "awardLevel": "",
+
+                "id": "rot_015",
+                "image": "rot.jpg",
+                "availability": "available",
+                "content":  0.75,
+                "unitOfMeasurement": "LTR",
+                "varietal": "",
+                "priceCurrency": "EUR"
+             }
         ]
     },
     "redPremiumWines": {
         "title": "Premium Rotweine",
         "list": [
-            {
-                "id": "tl1",
-                "image": "rot_liter.jpg",
-                "name": "Trollinger mit Lemberger",
-                "varietal": "",
-                "vintage": "",
-                "availability": "available",
-                "content": 1,
-                "unitOfMeasurement": "LTR",
-                "price": 4.40,
-                "priceCurrency": "EUR",
+             {
+                "name": "Bussard",
+                "vintage": "2014",
+                "price": 8.00,
+
                 "awardText": "",
-                "awardLevel": ""
-            },
-            {
-                "id": "l1",
-                "image": "rot_liter.jpg",
-                "name": "Lemberger",
-                "varietal": "",
-                "vintage": "",
+                "awardLevel": "",
+
+                "id": "rot_016",
+                "image": "rot_premium.jpg",
                 "availability": "available",
-                "content": 0.75,
+                "content":  0.75,
                 "unitOfMeasurement": "LTR",
-                "price": 5.40,
-                "priceCurrency": "EUR",
+                "varietal": "Lemberger",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Milan",
+                "vintage": "2014",
+                "price": 8.00,
+
                 "awardText": "",
-                "awardLevel": ""
-            },
-            {
-                "id": "t1",
-                "image": "rot_liter.jpg",
-                "name": "Trollinger",
-                "varietal": "",
-                "vintage": "",
+                "awardLevel": "",
+
+                "id": "rot_017",
+                "image": "rot_premium.jpg",
                 "availability": "available",
-                "content": 0.75,
+                "content":  0.75,
                 "unitOfMeasurement": "LTR",
-                "price": 4.40,
-                "priceCurrency": "EUR",
-                "awardText": "",
-                "awardLevel": ""
-            },
-            {
-                "id": "t2",
-                "image": "rot_liter.jpg",
-                "name": "Trollinger",
-                "varietal": "",
-                "vintage": "",
+                "varietal": "Lemberger trocken",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Milan",
+                "vintage": "2014",
+                "price": 8.00,
+
+                "awardText": "im Holzfass gereift",
+                "awardLevel": "",
+
+                "id": "rot_018",
+                "image": "rot_premium.jpg",
                 "availability": "available",
-                "content": 0.75,
+                "content":  0.75,
                 "unitOfMeasurement": "LTR",
-                "price": 4.40,
-                "priceCurrency": "EUR",
+                "varietal": "Spätburgunder trocken",
+                "priceCurrency": "EUR"
+             },
+             {
+                "name": "Milan",
+                "vintage": "2015",
+                "price": 5.80,
+
                 "awardText": "",
-                "awardLevel": ""
-            },
-            {
-                "id": "l2",
-                "image": "rot_liter.jpg",
-                "name": "Lemberger",
-                "varietal": "",
-                "vintage": "",
+                "awardLevel": "",
+
+                "id": "rot_019",
+                "image": "rot_premium.jpg",
                 "availability": "available",
-                "content": 0.75,
+                "content":  0.75,
                 "unitOfMeasurement": "LTR",
-                "price": 6.40,
-                "priceCurrency": "EUR",
+                "varietal": "Trollinger trocken",
+                "priceCurrency": "EUR"
+             },
+
+             {
+                "name": "Bussard",
+                "vintage": "2015",
+                "price": 5.80,
+
                 "awardText": "",
-                "awardLevel": ""
-            }
+                "awardLevel": "",
+
+                "id": "rot_020",
+                "image": "rot_premium.jpg",
+                "availability": "available",
+                "content":  0.75,
+                "unitOfMeasurement": "LTR",
+                "varietal": "Trollinger",
+                "priceCurrency": "EUR"
+             }
+
         ]
     }
 }

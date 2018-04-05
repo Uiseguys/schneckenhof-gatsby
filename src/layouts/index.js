@@ -10,9 +10,9 @@ import Navigation from '../components/Navigation';
 import '../scss/style.scss'
 import '../assets/icons/style.css'
 
-const TemplateWrapper = ({ children, lang, onLangChange }) => (
+const TemplateWrapper = ({ children, lang, onLangChange, location }) => (
   <div>
-    <Helmet title='Gatsby Default Starter' meta={[ { name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' } ]} />
+    <Helmet title='Weingut Schneckenhof' meta={[ { name: 'description', content: 'Weingut Schneckenhof' }, { name: 'keywords', content: 'Weingut, Schneckenhof' } ]} />
     <Navigation />
     <div>
       {children()}
@@ -32,6 +32,7 @@ export default class extends React.Component {
   }
 
   render = () => {
+    console.log(this.props.location.pathname)
     const lang = langFromPath(this.props.location.pathname)
     return (
       <I18nProvider language={lang} catalogs={catalogs}>

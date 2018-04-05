@@ -1,44 +1,26 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import { logo } from '../assets'
-export default () => (
+
+const WineLink = ({ to, icon }) => (
+  <Link to={to}>
+    <li className={location.pathname.startsWith(to) ? 'active' : ''}>
+      <span className={icon}>
+        <span className='path1' />
+        <span className='path2' />
+      </span>
+    </li>
+  </Link>
+)
+
+export default ({ location }) => (
   <div>
     <nav className='wine-navigation'>
       <ul>
-        <li className='active'>
-          <a href='../rotweine'>
-            <span className='icon-i_red'>
-              <span className='path1' />
-              <span className='path2' />
-            </span>
-          </a>
-        </li>
-
-        <li className='active'>
-          <a href='../weissweine'>
-            <span className='icon-i_white'>
-              <span className='path1' />
-              <span className='path2' />
-            </span>
-          </a>
-        </li>
-
-        <li className='active'>
-          <a href='../roseweine'>
-            <span className='icon-i_rose'>
-              <span className='path1' />
-              <span className='path2' />
-            </span>
-          </a>
-        </li>
-
-        <li className='active'>
-          <a href='../sekt'>
-            <span className='icon-i_champagne'>
-              <span className='path1' />
-              <span className='path2' />
-            </span>
-          </a>
-        </li>
+        <WineLink to='/rotweine' location={location} icon='icon-i_red' />
+        <WineLink to='/weissweine' location={location} icon='icon-i_white' />
+        <WineLink to='/roseweine' location={location} icon='icon-i_rose' />
+        <WineLink to='/sekt' location={location} icon='icon-i_champagne' />
       </ul>
     </nav>
 
