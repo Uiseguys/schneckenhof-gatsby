@@ -2,15 +2,15 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { logo } from '../assets'
 
-const WineLink = ({ to, icon, location}) => (
-  <Link to={to}>
-    <li className={location.pathname.startsWith(to) ? 'active' : ''}>
+const WineLink = ({ to, icon, location }) => (
+  <li className={location.pathname.startsWith(to) ? 'active' : ''}>
+    <Link to={to}>
       <span className={icon}>
         <span className='path1' />
         <span className='path2' />
       </span>
-    </li>
-  </Link>
+    </Link>
+  </li>
 )
 
 export default ({ location }) => (

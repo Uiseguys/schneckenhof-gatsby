@@ -1,0 +1,1 @@
+export const filterPremium = (data, isPremium) => data.allWine.edges.map((edge) => edge.node).filter((node) => node.premium == isPremium)

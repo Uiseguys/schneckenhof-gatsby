@@ -4,18 +4,36 @@ import SubpageHeader from '../components/SubpageHeader'
 import WineNavigation from '../components/WineNavigation'
 import Wines from '../components/Wines'
 
-import { redWines, redPremiumWines } from '../assets/rotweine.json'
+import { filterPremium } from '../util'
 
-export default ({location}) => (
+export default ({location, data}) => (
   <div className='content-container'>
     <SubpageHeader />
 
     <WineNavigation location={location}/>
 
-    <h2>{redWines.title}</h2>
-    <Wines wines={redWines.list} />
+    <h2>Rotweine</h2>
+    <Wines wines={filterPremium(data, false)} />
 
-    <h2>{redPremiumWines.title}</h2>
-    <Wines wines={redPremiumWines.list} />
+    <h2>Premium Rotweine</h2>
+    <Wines wines={filterPremium(data, true)} />
   </div>
 )
+
+export const query = graphql`
+  query RedWineQuery {
+    allWine(filter: { type: { eq: "red" } }) {
+      edges {
+        node {
+          name
+          premium
+          image
+          vintage
+          varietal
+          price
+          content
+        }
+      }
+    }
+  }
+`

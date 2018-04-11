@@ -13,8 +13,8 @@ import restaurant from '../assets/images/restaurant.jpg'
 import config from './index.json'
 
 const Teaser = (props) => (
-  <div class='teaser'>
-    <div class='icon'>
+  <div className='teaser'>
+    <div className='icon'>
       <span className={'icon-i_' + props.data.icon} />
     </div>
     <h2>{props.data.title}</h2>
@@ -49,7 +49,7 @@ const IndexPage = ({ i18n }) => (
       <div className='image' style={{ backgroundImage: `url(${wines})` }} />
       <div>
         <Teaser data={config.index.teaser.wines} />
-        <div class='cta'>
+        <div className='cta'>
           <a href='weine'>Mehr über unsere Weine</a>
         </div>
       </div>
@@ -59,7 +59,7 @@ const IndexPage = ({ i18n }) => (
       <div className='image' style={{ backgroundImage: `url(${party1})` }} />
       <div>
         <Teaser data={config.index.teaser.events} />
-        <div class='cta'>
+        <div className='cta'>
           <a href='aktuelles'>Aktuelle Veranstaltungen</a>
         </div>
       </div>
@@ -69,7 +69,7 @@ const IndexPage = ({ i18n }) => (
       <div className='image' style={{ backgroundImage: `url(${restaurant})` }} />
       <div>
         <Teaser data={config.index.teaser.restaurant} />
-        <div class='cta'>
+        <div className='cta'>
           <a href='gasthaus'>Mehr über unser Gasthaus</a>
         </div>
       </div>

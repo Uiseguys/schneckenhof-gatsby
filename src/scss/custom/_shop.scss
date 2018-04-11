@@ -15,7 +15,7 @@
 	position: relative;
 	margin: 2%;
 	width: 250px;
-	height: 520px;
+	min-height: 520px;
 	flex-basis: 12%;
 
 	@include media('<mobile-p') {
@@ -161,6 +161,10 @@
 
 			&.active {
 				border-bottom: 2px solid #ccc;
+			}
+
+			&:hover {
+				opacity: 0.5;
 			}
 
 			a {

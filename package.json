@@ -25,6 +25,7 @@
     "@babel/preset-react": "^7.0.0-beta.42",
     "@lingui/babel-preset-react": "^2.0.5",
     "@lingui/react": "^2.0.5",
+    "accounting": "^0.4.1",
     "cross-env": "^5.1.4",
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",

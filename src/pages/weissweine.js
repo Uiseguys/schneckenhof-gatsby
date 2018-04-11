@@ -4,18 +4,37 @@ import SubpageHeader from '../components/SubpageHeader'
 import WineNavigation from '../components/WineNavigation'
 import Wines from '../components/Wines'
 
-import { whiteWines, whitePremiumWines } from '../assets/weissweine.json'
+import { filterPremium } from '../util'
 
-export default ({location}) => (
+export default ({ location, data }) => (
   <div className='content-container'>
+    {console.log(data)}
     <SubpageHeader />
 
-    <WineNavigation location={location}/>
+    <WineNavigation location={location} />
 
-    <h2>{whiteWines.title}</h2>
-    <Wines wines={whiteWines.list} />
+    <h2>Weißweine</h2>
+    <Wines wines={filterPremium(data, false)} />
 
-    <h2>{whitePremiumWines.title}</h2>
-    <Wines wines={whitePremiumWines.list} />
+    <h2>Premium Weißweine</h2>
+    <Wines wines={filterPremium(data, true)} />
   </div>
 )
+
+export const query = graphql`
+  query WhiteWineQuery {
+    allWine(filter: { type: { eq: "white" } }) {
+      edges {
+        node {
+          name
+          premium
+          image
+          vintage
+          varietal
+          price
+          content
+        }
+      }
+    }
+  }
+`

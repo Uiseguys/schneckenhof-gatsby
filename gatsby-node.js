@@ -1,7 +1,5 @@
 const { languages, defaultLanguage } = require('./src/i18n-config')
 
-console.log(languages, defaultLanguage)
-
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage, deletePage } = boundActionCreators
 
