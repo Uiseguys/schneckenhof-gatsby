@@ -7,13 +7,18 @@ import Header from '../components/Header'
 import { catalogs, prefix, deprefix, langFromPath } from '../i18n-config'
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import Cart from '../components/Cart'
 import '../scss/style.scss'
 import '../assets/icons/style.css'
+
+const displayNav = ({pathname}) => !pathname.startsWith('/checkout')
 
 const TemplateWrapper = ({ children, lang, onLangChange, location }) => (
   <div>
     <Helmet title='Weingut Schneckenhof' meta={[ { name: 'description', content: 'Weingut Schneckenhof' }, { name: 'keywords', content: 'Weingut, Schneckenhof' } ]} />
-    <Navigation />
+    
+    {displayNav(location) ? <Cart /> : false}
+    {displayNav(location) ? <Navigation /> : false}
     <div>
       {children()}
     </div>

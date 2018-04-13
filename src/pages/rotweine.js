@@ -8,6 +8,7 @@ import { filterPremium } from '../util'
 
 export default ({location, data}) => (
   <div className='content-container'>
+
     <SubpageHeader />
 
     <WineNavigation location={location}/>
@@ -25,6 +26,7 @@ export const query = graphql`
     allWine(filter: { type: { eq: "red" } }) {
       edges {
         node {
+          id
           name
           premium
           image

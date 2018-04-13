@@ -27,12 +27,15 @@
     "@lingui/react": "^2.0.5",
     "accounting": "^0.4.1",
     "cross-env": "^5.1.4",
+    "cross-fetch": "^2.1.0",
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-postcss-sass": "^1.0.19",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-react-next": "^1.0.11",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "prettier": "^1.11.1"
