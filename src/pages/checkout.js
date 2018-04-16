@@ -1,8 +1,11 @@
 import React from 'react'
-import 'cross-fetch/polyfill'
+import { connect } from 'react-redux'
+import { navigateTo } from 'gatsby-link'
 
 import SubpageHeader from '../components/SubpageHeader'
 import Cart from '../components/Cart'
+
+const windowGlobal = typeof window !== 'undefined' && window
 
 class Checkout extends React.Component {
   constructor () {
@@ -16,21 +19,46 @@ class Checkout extends React.Component {
     const form = event.target
     const data = new FormData(form)
 
-    console.log(data)
-
+    // console.log(this.props)
+    // console.log(form)
+    // console.log(data)
+    let formBody = []
     for (let name of data.keys()) {
-      console.log(name, data.get(name))
+      // console.log(name, data.get(name))
+      let encodedKey = encodeURIComponent(name)
+      let encodedValue = encodeURIComponent(data.get(name))
+      formBody.push(encodedKey + '=' + encodedValue)
     }
+
+    let items = this.props.items.map((item, index) => {
+      formBody.push(encodeURIComponent(`items[${index}][name]`) + '=' + encodeURIComponent(`\n${item.content}l \n ${item.name}\n`))
+      formBody.push(encodeURIComponent(`items[${index}][price]`) + '=' + encodeURIComponent(item.price.toFixed(2)))
+      formBody.push(encodeURIComponent(`items[${index}][quantity]`) + '=' + encodeURIComponent(item.quantity))
+      formBody.push(encodeURIComponent(`items[${index}][currency]`) + '=' + encodeURIComponent('EUR'))
+    })
+
+    formBody.push(encodeURIComponent(`shipping`) + '=' + encodeURIComponent(this.props.shipping.toFixed(2)))
+    formBody.push(encodeURIComponent(`subtotal`) + '=' + encodeURIComponent(this.props.total.toFixed(2)))
+    formBody.push(encodeURIComponent(`total`) + '=' + encodeURIComponent(this.props.grandTotal.toFixed(2)))
+
+    formBody = formBody.join('&')
 
     fetch('https://schneckenhof-api.herokuapp.com/api/payment/checkout', {
       method: 'POST',
       headers: {
-        Accept: 'application/json, application/xml, text/plain, text/html, *.*',
         'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
       },
-      mode: 'no-cors',
-      body: data
-    }).then((res) => console.log(res))
+      body: formBody
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        this.props.clear()
+        windowGlobal && (document.location.href = res.href)
+      })
+      .catch((e) => {
+        this.props.clear()
+        navigateTo('/danke')
+      })
   }
 
   reset () {
@@ -154,4 +182,16 @@ class Checkout extends React.Component {
   }
 }
 
-export default Checkout
+// export default Checkout
+
+const mapStateToProps = ({ count, items, shipping, total, grandTotal }) => {
+  return { count, items, shipping, total, grandTotal }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    clear: () => dispatch({ type: 'CLEAR' })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout)

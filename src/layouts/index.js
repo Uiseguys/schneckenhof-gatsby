@@ -11,7 +11,7 @@ import Cart from '../components/Cart'
 import '../scss/style.scss'
 import '../assets/icons/style.css'
 
-const displayNav = ({pathname}) => !pathname.startsWith('/checkout')
+const displayNav = ({pathname}) => !pathname.startsWith('/checkout') && !pathname.startsWith('/danke')
 
 const TemplateWrapper = ({ children, lang, onLangChange, location }) => (
   <div>
