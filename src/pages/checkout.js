@@ -43,7 +43,7 @@ class Checkout extends React.Component {
 
     formBody = formBody.join('&')
 
-    fetch('https://schneckenhof-api.herokuapp.com/api/payment/checkout', {
+    fetch('https://dev-schneckenhof-api.herokuapp.com/api/payment/checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'

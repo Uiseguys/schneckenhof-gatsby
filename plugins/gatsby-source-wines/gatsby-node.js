@@ -4,18 +4,23 @@ const fetch = require('node-fetch')
 
 exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators
-  const data = await fetch(`https://schneckenhof-api.herokuapp.com/api/Wines`).then((res) => res.json())
+  const data = await fetch(
+    `https://dev-schneckenhof-api.herokuapp.com/api/Wines`
+  ).then(res => res.json())
   const type = 'Wine'
-  data.map((item) => {
+  data.map(item => {
     item.id = item.id + ''
-    const contentDigest = crypto.createHash(`md5`).update(JSON.stringify(item)).digest(`hex`)
+    const contentDigest = crypto
+      .createHash(`md5`)
+      .update(JSON.stringify(item))
+      .digest(`hex`)
     const nodeBase = {
       parent: null,
       children: [],
       internal: {
         contentDigest,
-        type
-      }
+        type,
+      },
     }
 
     createNode(Object.assign({}, nodeBase, item))
