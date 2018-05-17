@@ -9,7 +9,7 @@ import { filterPremium } from '../util'
 
 export default ({ location, data }) => (
   <div className='content-container'>
-    {console.log(data)}
+    
     <SubpageHeader />
 
     <WineNavigation location={location} />

@@ -10,5 +10,10 @@ export const WineFragment = graphql`
     content
     awardText
     awardLevel
+    packaging {
+      displayName
+      measure
+      unitOfMeasure
+    }
   }
 `

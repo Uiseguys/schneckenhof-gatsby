@@ -1,7 +1,7 @@
 import React from 'react'
 import accounting from 'accounting'
 import AddToCart from './AddToCart'
-import AwwardBadge from './AwardBadge';
+import AwwardBadge from './AwardBadge'
 
 const onWineChange = (wine) => {}
 
@@ -21,7 +21,6 @@ export default ({ wine }) => (
     </div>
 
     <AwwardBadge awardText={wine.awardText} awardLevel={wine.awardLevel} />
-    
 
     <div className='description'>
       <div>
@@ -35,31 +34,25 @@ export default ({ wine }) => (
         )}
 
         <AddToCart item={wine} />
+        
+        {wine.packaging && (
+          <div className='wine__costs'>
+            <span className='content'>
+              <span className='item_content'>{wine.packaging.displayName || wine.packaging.measure + wine.packaging.unitOfMeasure}</span>
+              {/* {wine.content < 1 && <span className='liter-price'>{accounting.formatMoney(wine.price / (wine.content * 100) * 100, '€', 2, '.', ',')}/l</span>} */}
+              {wine.packaging.measure < 1000 && (
+                <span className='liter-price'>{accounting.formatMoney(wine.price / wine.packaging.measure * 1000, '€', 2, '.', ',')}/l</span>
+              )}
+            </span>
 
-        {/* <div className='shop-link'>
-          <div className='input'>
-            <input type='text' defaultValue='1' className='item_Quantity' onChange={onWineChange(wine)} />
-            <br />
+            <span className='item_price visuallyhidden'>{wine.price}</span>
+
+            <span className='c-price'>
+              <PriceInt price={wine.price} />
+              <PriceDec price={wine.price} />
+            </span>
           </div>
-          <div className='button'>
-            <a className='item_add' href='javascript:;'>
-              <span className='icon-i_basket' />
-            </a>
-          </div>
-        </div> */}
-        <div className='wine__costs'>
-          <span className='content'>
-            <span className='item_content'>{wine.content}l</span>
-            {wine.content < 1 && <span className='liter-price'>{accounting.formatMoney(wine.price / (wine.content * 100) * 100, '€', 2, '.', ',')}/l</span>}
-          </span>
-
-          <span className='item_price visuallyhidden'>{wine.price}</span>
-
-          <span className='c-price'>
-            <PriceInt price={wine.price} />
-            <PriceDec price={wine.price} />
-          </span>
-        </div>
+        )}
       </div>
     </div>
   </div>

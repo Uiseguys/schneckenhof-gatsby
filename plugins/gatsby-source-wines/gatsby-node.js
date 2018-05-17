@@ -5,10 +5,11 @@ const fetch = require('node-fetch')
 exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators
   const data = await fetch(
-    `https://dev-schneckenhof-api.herokuapp.com/api/Wines`
+    `https://schneckenhof-api.herokuapp.com/api/Wines?filter={"include":["packaging"]}`
   ).then(res => res.json())
   const type = 'Wine'
   data.map(item => {
+    console.log(item)
     item.id = item.id + ''
     const contentDigest = crypto
       .createHash(`md5`)
