@@ -3,6 +3,7 @@ import React from 'react'
 import SubpageHeader from '../components/SubpageHeader'
 import WineNavigation from '../components/WineNavigation'
 import Wines from '../components/Wines'
+import { WineFragment } from '../fragments'
 
 export default ({location, data}) => (
   <div className='content-container'>
@@ -21,12 +22,7 @@ export const query = graphql`
     allWine(filter: { type: { eq: "rose" } }) {
       edges {
         node {
-          name
-          image
-          vintage
-          varietal
-          price
-          content
+          ...WineFragment
         }
       }
     }

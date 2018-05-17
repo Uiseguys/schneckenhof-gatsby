@@ -1,6 +1,7 @@
 import React from 'react'
 import accounting from 'accounting'
 import AddToCart from './AddToCart'
+import AwwardBadge from './AwardBadge';
 
 const onWineChange = (wine) => {}
 
@@ -18,6 +19,9 @@ export default ({ wine }) => (
         <img src={wine.image} />
       </a>
     </div>
+
+    <AwwardBadge awardText={wine.awardText} awardLevel={wine.awardLevel} />
+    
 
     <div className='description'>
       <div>

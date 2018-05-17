@@ -4,6 +4,7 @@ import SubpageHeader from '../components/SubpageHeader'
 import WineNavigation from '../components/WineNavigation'
 import Wines from '../components/Wines'
 
+import { WineFragment } from '../fragments'
 import { filterPremium } from '../util'
 
 export default ({ location, data }) => (
@@ -26,13 +27,7 @@ export const query = graphql`
     allWine(filter: { type: { eq: "white" } }) {
       edges {
         node {
-          name
-          premium
-          image
-          vintage
-          varietal
-          price
-          content
+         ...WineFragment
         }
       }
     }

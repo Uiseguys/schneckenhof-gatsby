@@ -3,15 +3,14 @@ import React from 'react'
 import SubpageHeader from '../components/SubpageHeader'
 import WineNavigation from '../components/WineNavigation'
 import Wines from '../components/Wines'
-
+import { WineFragment } from '../fragments'
 import { filterPremium } from '../util'
 
-export default ({location, data}) => (
+export default ({ location, data }) => (
   <div className='content-container'>
-
     <SubpageHeader />
 
-    <WineNavigation location={location}/>
+    <WineNavigation location={location} />
 
     <h2>Rotweine</h2>
     <Wines wines={filterPremium(data, false)} />
@@ -26,14 +25,7 @@ export const query = graphql`
     allWine(filter: { type: { eq: "red" } }) {
       edges {
         node {
-          id
-          name
-          premium
-          image
-          vintage
-          varietal
-          price
-          content
+          ...WineFragment
         }
       }
     }
