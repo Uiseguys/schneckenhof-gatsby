@@ -28,8 +28,8 @@ const AwardBadge = ({awardText, awardLevel}) => (
   
   <div {...box} >
     {awardText && <div className='text'>{awardText}</div>}
-    {(awardLevel == '' && awardText != '' ? <div className={`badge gold`}/> : null)}
-    {awardLevel && <div className={`badge ` + awardLevel}/>}
+    {(awardLevel == '' && awardText != '' ? <div className={`coin gold`}/> : null)}
+    {awardLevel && <div className={`coin ` + awardLevel}/>}
   </div>
 )
 export default AwardBadge
