@@ -160,14 +160,14 @@ class Checkout extends React.Component {
                 <br />
                 <br />
               </p>
-              <p>
+              {/* <p>
                 <label>
                   <input type='radio' name='pay_method' value='invoice' checked />Invoice
                 </label>
                 <label style={{ marginLeft: '20px' }}>
                   <input type='radio' name='pay_method' value='paypal' />Paypal
                 </label>
-              </p>
+              </p> */}
               <div class='form-group'>
                 <input type='reset' value='Zurück' class='btn btn-link btn-secondary' onClick={this.reset} />
 
