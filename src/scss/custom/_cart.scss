@@ -75,9 +75,10 @@
         top: 1rem;
         font-size: 6rem;
         opacity: .2;
-        background-image: linear-gradient(90deg, #432314, #976f3e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #976f3e;
+        // background-image: linear-gradient(90deg, #432314, #976f3e);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
       }
     }
   }
@@ -135,9 +136,13 @@
   padding-top: 3rem;
   text-align: right;
   text-transform: uppercase;
-  background-image: linear-gradient(90deg, #432314, #976f3e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  a {
+    color: #976f3e !important;
+  }
+  // background-image: linear-gradient(90deg, #432314, #976f3e);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
 }
 
 .cart .checkout-button:hover {
