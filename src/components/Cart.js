@@ -22,8 +22,8 @@ const CartItem = ({ item, add, remove }) => (
   </div>
 )
 
-const Cart = ({ checkout, count, shipping, total, grandTotal, items, add, remove, clear }) => (
-  <div className={'cart ' + (checkout ? 'checkout' : '')} style={{ display: count > 0 ? 'initial' : 'none' }}>
+const Cart = ({ checkout, count, shipping, total, grandTotal, items, add, remove, clear }) => count > 0 && (
+  <div className={'cart ' + (checkout ? 'checkout' : '')} >
     <div className='summary'>
       <div className='quantity simpleCart_quantity'>{count}</div>
       <span className='icon-i_basket' />
