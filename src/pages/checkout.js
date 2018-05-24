@@ -67,7 +67,7 @@ class Checkout extends React.Component {
 
   render () {
     return (
-      <div class='content-container'>
+      <div className='content-container'>
         <div className='checkout'>
           <SubpageHeader />
 
@@ -79,53 +79,53 @@ class Checkout extends React.Component {
               <br />
               <br />
             </p>
-            <fieldset class='personal'>
+            <fieldset className='personal'>
               <legend>Ihre Daten:</legend>
 
-              <div class='form-group'>
-                <label for='realname'>
+              <div className='form-group'>
+                <label htmlFor='realname'>
                   Name:
-                  <span class='hint'>*</span>
+                  <span className='hint'>*</span>
                 </label>
-                <input type='text' id='realname' name='realname' class='required form-control' required />
+                <input type='text' id='realname' name='realname' className='required form-control' required />
               </div>
-              <div class='form-group'>
-                <label for='street'>
+              <div className='form-group'>
+                <label htmlFor='street'>
                   Stra&szlig;e, Haus-Nr:
-                  <span class='hint'>*</span>
+                  <span className='hint'>*</span>
                 </label>
-                <input type='text' name='street' id='street' class='required form-control' required />
+                <input type='text' name='street' id='street' className='required form-control' required />
               </div>
-              <div class='form-group'>
-                <label for='zip'>
+              <div className='form-group'>
+                <label htmlFor='zip'>
                   PLZ:
-                  <span class='hint'>*</span>
+                  <span className='hint'>*</span>
                 </label>
-                <input type='text' name='zip' id='zip' class='required form-control' required />
+                <input type='text' name='zip' id='zip' className='required form-control' required />
               </div>
-              <div class='form-group'>
-                <label for='city'>
+              <div className='form-group'>
+                <label htmlFor='city'>
                   Wohnort:
-                  <span class='hint'>*</span>
+                  <span className='hint'>*</span>
                 </label>
-                <input type='text' name='city' id='city' class='required form-control' required />
+                <input type='text' name='city' id='city' className='required form-control' required />
               </div>
-              <div class='form-group'>
-                <label for='email' id='email'>
+              <div className='form-group'>
+                <label htmlFor='email' id='email'>
                   Email:
-                  <span class='hint'>*</span>
+                  <span className='hint'>*</span>
                 </label>
-                <input type='email' name='email' class='required email form-control' required />
+                <input type='email' name='email' className='required email form-control' required />
               </div>
-              <div class='form-group'>
-                <label for='phone'>Telefon (optional, bei evtl. Rückfragen):</label>
-                <input type='text' name='phone' id='phone' class='form-control' />
+              <div className='form-group'>
+                <label htmlFor='phone'>Telefon (optional, bei evtl. Rückfragen):</label>
+                <input type='text' name='phone' id='phone' className='form-control' />
               </div>
             </fieldset>
             <fieldset>
-              <div class='form-check'>
-                <label class='form-check-label' for='agreement-1'>
-                  <input type='checkbox' class='form-check-input' required id='agreement-1' name='agreement[1]' value='1' />
+              <div className='form-check'>
+                <label className='form-check-label' htmlFor='agreement-1'>
+                  <input type='checkbox' className='form-check-input' required id='agreement-1' name='agreement[1]' value='1' />
                   Ich habe die{' '}
                   <a href='/agb' target='_blank'>
                     AGB
@@ -139,18 +139,18 @@ class Checkout extends React.Component {
                 <br />
               </div>
 
-              <div class='form-check'>
-                <label class='form-check-label' for='agreement-2'>
-                  <input type='checkbox' class='form-check-input' required id='agreement-2' name='agreement[3]' value='1' />
+              <div className='form-check'>
+                <label className='form-check-label' htmlFor='agreement-2'>
+                  <input type='checkbox' className='form-check-input' required id='agreement-2' name='agreement[3]' value='1' />
                   Ich bestätige, dass ich volljährig bin
                 </label>
                 <br />
                 <br />
               </div>
 
-              <div class='form-group'>
-                <label for='message'>Bemerkungen:</label>
-                <textarea name='message' id='message' class='form-control' />
+              <div className='form-group'>
+                <label htmlFor='message'>Bemerkungen:</label>
+                <textarea name='message' id='message' className='form-control' />
               </div>
 
               <p>
@@ -168,11 +168,11 @@ class Checkout extends React.Component {
                   <input type='radio' name='pay_method' value='paypal' />Paypal
                 </label>
               </p> */}
-              <div class='form-group'>
-                <input type='reset' value='Zurück' class='btn btn-link btn-secondary' onClick={this.reset} />
+              <div className='form-group'>
+                <input type='reset' value='Zurück' className='btn btn-link btn-secondary' onClick={this.reset} />
 
-                <input type='submit' name='button' id='submitter' class='btn btn-lg btn-primary' value='Bestellung abschicken' />
-                <input type='reset' value='Zur&uuml;cksetzen' id='order' class='hidden' />
+                <input type='submit' name='button' id='submitter' className='btn btn-lg btn-primary' value='Bestellung abschicken' />
+                <input type='reset' value='Zur&uuml;cksetzen' id='order' className='hidden' />
               </div>
             </fieldset>
           </form>

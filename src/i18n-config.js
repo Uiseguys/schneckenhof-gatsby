@@ -6,9 +6,11 @@ const catalogs = {
 
 const defaultLanguage = 'en'
 
+const startsWith = (str, searchString, position = 0) => str.indexOf(searchString, position) === position
+
 const prefix = (lang) => (lang == defaultLanguage ? '/' : '/' + lang)
-const deprefix = (pathname) => (pathname.startsWith('/ro/') ? pathname.substr(4) : pathname)
-const langFromPath = (pathname) => (pathname.startsWith('/ro/') ? 'ro' : 'en')
+const deprefix = (pathname) => (startsWith(pathname, '/ro/') ? pathname.substr(4) : pathname)
+const langFromPath = (pathname) => (startsWith(pathname, '/ro/') ? 'ro' : 'en')
 
 exports.defaultLanguage = defaultLanguage
 exports.languages = languages
