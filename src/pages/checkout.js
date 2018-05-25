@@ -6,6 +6,7 @@ import SubpageHeader from '../components/SubpageHeader'
 import Cart from '../components/Cart'
 
 const windowGlobal = typeof window !== 'undefined' && window
+const CHECKOUT_URL = 'https://schneckenhof-api.herokuapp.com/api/payment/checkout'
 
 class Checkout extends React.Component {
   constructor () {
@@ -43,7 +44,7 @@ class Checkout extends React.Component {
 
     formBody = formBody.join('&')
 
-    fetch('https://dev-schneckenhof-api.herokuapp.com/api/payment/checkout', {
+    fetch(CHECKOUT_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
