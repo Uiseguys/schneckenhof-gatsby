@@ -28,7 +28,7 @@ export default () => (
             E-Mail: <a href='mailto:info@weingut-schneckenhof.de'>info@weingut-schneckenhof.de</a>
             <br />
             <br />
-            USt-IdNr.: ????
+            USt-IdNr.: DE 30687128
           </span>
         </p>
 
