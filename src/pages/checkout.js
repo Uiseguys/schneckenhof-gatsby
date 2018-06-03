@@ -32,10 +32,14 @@ class Checkout extends React.Component {
     }
 
     let items = this.props.items.map((item, index) => {
-      formBody.push(encodeURIComponent(`items[${index}][name]`) + '=' + encodeURIComponent(`\n${item.content}l \n ${item.name}\n`))
+      formBody.push(encodeURIComponent(`items[${index}][name]`) + '=' + 
+        encodeURIComponent(`${item.packaging && (item.packaging.displayName || (item.packaging.measure + item.packaging.unitOfMeasure))} ${item.name} ${item.varietal}`))
       formBody.push(encodeURIComponent(`items[${index}][price]`) + '=' + encodeURIComponent(item.price.toFixed(2)))
       formBody.push(encodeURIComponent(`items[${index}][quantity]`) + '=' + encodeURIComponent(item.quantity))
       formBody.push(encodeURIComponent(`items[${index}][currency]`) + '=' + encodeURIComponent('EUR'))
+      formBody.push(encodeURIComponent(`items[${index}][packaging]`) + '=' + JSON.stringify(item.packaging))
+      formBody.push(encodeURIComponent(`items[${index}][varietal]`) + '=' + encodeURIComponent(item.varietal))
+      formBody.push(encodeURIComponent(`items[${index}][wineId]`) + '=' + encodeURIComponent(item.id))
     })
 
     formBody.push(encodeURIComponent(`shipping`) + '=' + encodeURIComponent(this.props.shipping.toFixed(2)))
