@@ -37,20 +37,26 @@ const IndexPage = ({ i18n }) => (
 
     <section>
       <div className='image' style={{ backgroundImage: `url(${family})` }} />
-      <Teaser data={config.index.teaser.vineyard} />
+      <div>
+        <Teaser data={config.index.teaser.vineyard} />
+      </div>
     </section>
 
     <section className='reverse'>
       <div className='image' style={{ backgroundImage: `url(${grapes})` }} />
-      <Teaser data={config.index.teaser.grapes} />
+      <div>
+        <Teaser data={config.index.teaser.grapes} />
+      </div>
     </section>
 
     <section>
       <div className='image' style={{ backgroundImage: `url(${wines})` }} />
       <div>
-        <Teaser data={config.index.teaser.wines} />
-        <div className='cta'>
-          <a href='weine'>Mehr über unsere Weine</a>
+        <div>
+          <Teaser data={config.index.teaser.wines} />
+          <div className='cta'>
+            <a href='weine'>Mehr über unsere Weine</a>
+          </div>
         </div>
       </div>
     </section>
@@ -58,9 +64,11 @@ const IndexPage = ({ i18n }) => (
     <section className='reverse'>
       <div className='image' style={{ backgroundImage: `url(${party1})` }} />
       <div>
-        <Teaser data={config.index.teaser.events} />
-        <div className='cta'>
-          <a href='aktuelles'>Aktuelle Veranstaltungen</a>
+        <div>
+          <Teaser data={config.index.teaser.events} />
+          <div className='cta'>
+            <a href='aktuelles'>Aktuelle Veranstaltungen</a>
+          </div>
         </div>
       </div>
     </section>
@@ -68,9 +76,11 @@ const IndexPage = ({ i18n }) => (
     <section>
       <div className='image' style={{ backgroundImage: `url(${restaurant})` }} />
       <div>
-        <Teaser data={config.index.teaser.restaurant} />
-        <div className='cta'>
-          <a href='gasthaus'>Mehr über unser Gasthaus</a>
+        <div>
+          <Teaser data={config.index.teaser.restaurant} />
+          <div className='cta'>
+            <a href='gasthaus'>Mehr über unser Gasthaus</a>
+          </div>
         </div>
       </div>
     </section>
