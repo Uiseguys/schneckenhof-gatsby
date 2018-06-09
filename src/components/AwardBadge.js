@@ -6,6 +6,7 @@ let box = css({
   display: 'block',
   position: 'absolute',
   right: '-8px',
+  top: '24px',
   '& .badge': { width: '50px', height: '50px', 'border-radius': '50%',  },
   '& .silver': {'background-color': 'silver'},
   '& .gold': {'background-color': 'gold'},
@@ -25,7 +26,7 @@ let box = css({
 })
 
 const AwardBadge = ({awardText, awardLevel}) => (
-  
+
   <div {...box} >
     {awardText && <div className='text'>{awardText}</div>}
     {(awardLevel == '' && awardText != '' ? <div className={`coin gold`}/> : null)}
