@@ -26,10 +26,11 @@ let box = css({
 })
 
 const AwardBadge = ({awardText, awardLevel}) => (
-
   <div {...box} >
     {awardText && <div className='text'>{awardText}</div>}
+    {(awardLevel == '' && awardText != '' ? <div className="ribbon"/> : null)}
     {(awardLevel == '' && awardText != '' ? <div className={`coin gold`}/> : null)}
+    {awardLevel && <div className="ribbon"/>}
     {awardLevel && <div className={`coin ` + awardLevel}/>}
   </div>
 )
