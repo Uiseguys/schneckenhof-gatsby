@@ -101,7 +101,7 @@ $size_sm: 20px;
   content: "";
   width: 19px;
   height: 38px;
-  background: #ee583a !important;
+  background: #be8f6b !important;
   top: -2px;
   right: 8px;
   display: block;
@@ -109,11 +109,11 @@ $size_sm: 20px;
   z-index: 500;
   // box-shadow: 1px 2px 1px 1px gray;
   // &:before {
-  //   @include triangle(2px, darken(#ee583a, 15%), down-right);
+  //   @include triangle(2px, darken(#be8f6b, 15%), down-right);
   //   left: -2px;
   // }
   &:after {
-    @include triangle(19px 7px, transparent #ee583a, up);
+    @include triangle(19px 7px, transparent #be8f6b, up);
     top: 38px;
   }
   &:before, &:after {
