@@ -93,11 +93,13 @@ $size_sm: 20px;
   width: 19px;
   height: 38px;
   background: #707070 !important;
-  top: 0px;
+  top: -1px;
   right: 7px;
   display: block;
   position: absolute;
   z-index: 100;
+  -webkit-filter: blur(0.5px);
+  filter: blur(0.5px);
   &:after {
     @include triangle(19px 7px, transparent #707070, up);
     top: 38px;
@@ -118,7 +120,6 @@ $size_sm: 20px;
   display: block;
   position: absolute;
   z-index: 500;
-  // box-shadow: 1px 2px 1px 0px gray;
   // &:before {
   //   @include triangle(2px, darken(#be8f6b, 15%), down-right);
   //   left: -2px;
