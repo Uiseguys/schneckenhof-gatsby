@@ -88,9 +88,20 @@ $size_sm: 20px;
   }
 }
 
-[class^="ribbon-"] {
-  position: relative;
-  margin-bottom: 80px;
+.ribbon-shadow {
+  content: "";
+  width: 19px;
+  height: 38px;
+  background: #707070 !important;
+  top: 0px;
+  right: 7px;
+  display: block;
+  position: absolute;
+  z-index: 100;
+  &:after {
+    @include triangle(19px 7px, transparent #707070, up);
+    top: 38px;
+  }
   &:before, &:after {
     content: "";
     position: absolute;
@@ -107,7 +118,7 @@ $size_sm: 20px;
   display: block;
   position: absolute;
   z-index: 500;
-  // box-shadow: 1px 2px 1px 1px gray;
+  // box-shadow: 1px 2px 1px 0px gray;
   // &:before {
   //   @include triangle(2px, darken(#be8f6b, 15%), down-right);
   //   left: -2px;
