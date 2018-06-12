@@ -98,8 +98,12 @@ $size_sm: 20px;
   display: block;
   position: absolute;
   z-index: 100;
-  -webkit-filter: blur(0.5px);
-  filter: blur(0.5px);
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -webkit-filter: blur(1px);
   &:after {
     @include triangle(19px 7px, transparent #707070, up);
     top: 38px;
