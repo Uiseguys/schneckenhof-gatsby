@@ -5,7 +5,8 @@ let box = css({
   cursor: 'pointer',
   display: 'block',
   position: 'absolute',
-  right: '-8px',
+  right: '20px',
+  top: '0px',
   '& .badge': { width: '50px', height: '50px', 'border-radius': '50%',  },
   '& .silver': {'background-color': 'silver'},
   '& .gold': {'background-color': 'gold'},
@@ -13,7 +14,7 @@ let box = css({
   '& .text': {
     display: 'none',
     position: 'absolute',
-    top: '-30px',
+    top: '50px',
     right: 0,
     'background-color': '#333333',
     'box-shadow': '2px 2px 4px -1px #888',
@@ -25,10 +26,13 @@ let box = css({
 })
 
 const AwardBadge = ({awardText, awardLevel}) => (
-  
   <div {...box} >
     {awardText && <div className='text'>{awardText}</div>}
+    {(awardLevel == '' && awardText != '' ? <div className="ribbon"/> : null)}
+    {(awardLevel == '' && awardText != '' ? <div className="ribbon-shadow"/> : null)}
     {(awardLevel == '' && awardText != '' ? <div className={`coin gold`}/> : null)}
+    {awardLevel && <div className="ribbon"/>}
+    {awardLevel && <div className="ribbon-shadow"/>}
     {awardLevel && <div className={`coin ` + awardLevel}/>}
   </div>
 )
