@@ -103,8 +103,8 @@ class Checkout extends React.Component {
     })
       .then(res => res.json())
       .then(res => {
-        // this.props.clear()
-        // windowGlobal && (document.location.href = res.href)
+        this.props.clear()
+        windowGlobal && (document.location.href = res.href)
       })
       .catch(e => {
         this.props.clear()
