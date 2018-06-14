@@ -55,6 +55,10 @@ section {
 	}
 
 	@include media('<tablet-p') {
+		> div > div {
+			padding: 5% 5% 0 5% !important;
+		}
+		height: auto;
 		&.reverse {
 			flex-direction: row;
 		}
