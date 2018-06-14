@@ -6,6 +6,7 @@ import SubpageHeader from '../components/SubpageHeader'
 import Cart from '../components/Cart'
 
 const windowGlobal = typeof window !== 'undefined' && window
+const CHECKOUT_URL = 'https://schneckenhof-api.herokuapp.com/api/payment/checkout'
 
 class Checkout extends React.Component {
   constructor () {
@@ -31,10 +32,14 @@ class Checkout extends React.Component {
     }
 
     let items = this.props.items.map((item, index) => {
-      formBody.push(encodeURIComponent(`items[${index}][name]`) + '=' + encodeURIComponent(`\n${item.content}l \n ${item.name}\n`))
+      formBody.push(encodeURIComponent(`items[${index}][name]`) + '=' + 
+        encodeURIComponent(`${item.packaging && (item.packaging.displayName || (item.packaging.measure + item.packaging.unitOfMeasure))} ${item.name} ${item.varietal}`))
       formBody.push(encodeURIComponent(`items[${index}][price]`) + '=' + encodeURIComponent(item.price.toFixed(2)))
       formBody.push(encodeURIComponent(`items[${index}][quantity]`) + '=' + encodeURIComponent(item.quantity))
       formBody.push(encodeURIComponent(`items[${index}][currency]`) + '=' + encodeURIComponent('EUR'))
+      formBody.push(encodeURIComponent(`items[${index}][packaging]`) + '=' + JSON.stringify(item.packaging))
+      formBody.push(encodeURIComponent(`items[${index}][varietal]`) + '=' + encodeURIComponent(item.varietal))
+      formBody.push(encodeURIComponent(`items[${index}][wineId]`) + '=' + encodeURIComponent(item.id))
     })
 
     formBody.push(encodeURIComponent(`shipping`) + '=' + encodeURIComponent(this.props.shipping.toFixed(2)))
@@ -43,7 +48,7 @@ class Checkout extends React.Component {
 
     formBody = formBody.join('&')
 
-    fetch('https://dev-schneckenhof-api.herokuapp.com/api/payment/checkout', {
+    fetch(CHECKOUT_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'

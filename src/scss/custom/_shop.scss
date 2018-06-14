@@ -23,8 +23,9 @@
   }
 
   padding: 2%;
-  // background-color: #fff;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
 
   .image {
     min-width: 130px;
@@ -48,6 +49,10 @@
     margin-top: auto;
     padding-top: 20px;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 80.8%;
+    padding-bottom: 9.6%;
 
     .item_varietal {
       font-size: 1em;
@@ -99,7 +104,11 @@
   }
 
   .shop-link a span {
-    color: #a2928a;
+    color: #976f3e;
+    /*    background-image:linear-gradient(90deg,#432314,#633c15,#b38d4e,#976f3e); */
+    /* background-image:linear-gradient(90deg,#432314,#976f3e);
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;*/
   }
 
   .shop-link:hover {

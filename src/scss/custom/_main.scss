@@ -48,12 +48,17 @@ section {
 	background-color: #fff;
 	display: flex;
 	flex-wrap: wrap;
+	height: 45vw;
 
 	&.reverse {
 		flex-direction: row-reverse;
 	}
 
 	@include media('<tablet-p') {
+		> div > div {
+			padding: 5% 5% 0 5% !important;
+		}
+		height: auto;
 		&.reverse {
 			flex-direction: row;
 		}
@@ -66,7 +71,6 @@ section {
 		overflow-y: auto;
 		position: relative;
 		width: 50%;
-		padding: 5%;
 		height: 45vw;
 
 		@include media('<tablet-p') {
@@ -114,6 +118,9 @@ section {
 			}
 		}
 
+		> div {
+			padding: 10%;
+		}
 	}
 
 }
