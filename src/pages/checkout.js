@@ -7,7 +7,7 @@ import Cart from '../components/Cart'
 
 const windowGlobal = typeof window !== 'undefined' && window
 const CHECKOUT_URL =
-  'https://dev-schneckenhof-api.herokuapp.com/api/payment/checkout'
+  'https://schneckenhof-api.herokuapp.com/api/payment/checkout'
 
 class Checkout extends React.Component {
   constructor() {
