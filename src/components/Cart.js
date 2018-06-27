@@ -40,7 +40,9 @@ const Cart = ({
       className={'cart ' + (checkout ? 'checkout' : '')}
       role="button"
       ref={c => {
-        c.onclick = 'return true'
+        c.addEventListener('click', () => {
+          return true
+        })
       }}
     >
       <div className="summary">
