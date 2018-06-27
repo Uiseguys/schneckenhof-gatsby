@@ -36,7 +36,13 @@ const Cart = ({
   clear,
 }) =>
   count > 0 && (
-    <div className={'cart ' + (checkout ? 'checkout' : '')} role="button">
+    <div
+      className={'cart ' + (checkout ? 'checkout' : '')}
+      role="button"
+      ref={c => {
+        c.onclick = 'return true'
+      }}
+    >
       <div className="summary">
         <div className="quantity simpleCart_quantity">{count}</div>
         <span className="icon-i_basket" />
