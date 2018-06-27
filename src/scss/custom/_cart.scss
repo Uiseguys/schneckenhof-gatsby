@@ -3,7 +3,7 @@
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   color: #ccc;
   cursor: pointer;
 
@@ -33,8 +33,8 @@
   }
 
   .summary {
-    [class^="icon-"],
-    [class*=" icon-"] {
+    [class^='icon-'],
+    [class*=' icon-'] {
       font-size: 3rem;
     }
 
@@ -53,7 +53,8 @@
     }
   }
 
-  &:hover:not(.inactive) {
+  &:hover:not(.inactive),
+  &:active:not(.inactive) {
     .details {
       display: block;
     }
@@ -68,13 +69,13 @@
         display: none;
       }
 
-      [class^="icon-"],
-      [class*=" icon-"] {
+      [class^='icon-'],
+      [class*=' icon-'] {
         position: absolute;
         right: 2rem;
         top: 1rem;
         font-size: 6rem;
-        opacity: .2;
+        opacity: 0.2;
         color: #976f3e;
         // background-image: linear-gradient(90deg, #432314, #976f3e);
         // -webkit-background-clip: text;
@@ -102,7 +103,7 @@
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   color: #ccc;
   cursor: pointer;
 
@@ -159,7 +160,7 @@
 }
 
 .cart .simpleCart_quantity {
-  padding: 1rem 1.5rem .2rem;
+  padding: 1rem 1.5rem 0.2rem;
   float: left;
 }
 
@@ -190,7 +191,7 @@
 }
 
 .cart .details .simpleCart_grandTotal {
-  padding: 1rem 3.5rem .2rem;
+  padding: 1rem 3.5rem 0.2rem;
   font-size: 3rem;
   clear: both;
   float: right;
@@ -254,7 +255,7 @@
     padding-bottom: 3rem;
 
     &:after {
-      content: "";
+      content: '';
       display: table;
       clear: both;
     }
