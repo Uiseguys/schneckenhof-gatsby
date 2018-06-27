@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
@@ -23,8 +23,7 @@ module.exports = class HTML extends React.Component {
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+          <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
 
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -44,6 +43,12 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
         </body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function(l){var i,s={touchend:function(){}};for(i in s)l.addEventListener(i,s)})(document); // sticky hover fix in iOS',
+          }}
+        />
       </html>
     )
   }
