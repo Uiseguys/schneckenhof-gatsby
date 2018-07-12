@@ -126,7 +126,7 @@ export default () => (
               Die erste Wein-Rock-Nacht im vergangenen Sommer war ein voller Erfolg! Bei tollem Wetter und super Stimmung wurde gerockt und gefeiert. Zusammen
               mit dem Weingut Birkert präsentieren wir nun die 2. WEIN-ROCK-NACHT. Karten gibt es für 6 € im Vorverkauf bei uns oder dem Weingut Birkert, der
               Reiffeisenbank Bretzfeld und bei Kober Getränkevertrieb Neuenstein. <br />
-              Restkarten gibt es an der Abendkasse für 8€
+              Restkarten gibt es an der Abendkasse für 10€
               <br /> <br />
             </p>
           </div>
@@ -152,7 +152,7 @@ export default () => (
               <br /> <br />
               Außer Musik gibt es Deftiges und Leichtees aus der Küche und natürlich die feinen Tröpfchen der beiden Weingüter
               <br /> <br />
-              Karten gibt es für 8 € im Vorverkauf bei uns oder dem Weingut Birkert,
+              Karten gibt es für 12 € im Vorverkauf bei uns oder dem Weingut Birkert, Abendkasse für 15€.
               <br /> <br />
             </p>
           </div>
