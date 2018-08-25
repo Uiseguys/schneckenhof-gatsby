@@ -322,3 +322,15 @@ footer {
 	position: absolute;
 	top: 0;
 }
+
+.info {
+	position: absolute;
+	top: calc( 100vh - 140px);
+	width: 100%;
+
+	h4 {
+		padding: 10px;
+		text-align: center;
+		background-color: rgba(255,255,255,0.6);
+	}
+}
