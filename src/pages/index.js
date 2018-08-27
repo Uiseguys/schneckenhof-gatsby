@@ -33,12 +33,6 @@ const IndexPage = ({ i18n }) => (
       <div>
         <img src={badge} />
       </div>
-<!--
-      <div class="info">
-          <h4>Unser Gasthaus "Zum Lamm" bleibt an diesem Wochenende (25. & 26. August)<br />
-              aufgrund einer Familienfeier geschlossen</h4>
-      </div>
-        //-->
     </header>
 
     <section>

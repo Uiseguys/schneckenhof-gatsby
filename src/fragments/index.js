@@ -1,5 +1,7 @@
 export const WineFragment = graphql`
   fragment WineFragment on Wine {
+    type
+    mytype
     id
     name
     premium
