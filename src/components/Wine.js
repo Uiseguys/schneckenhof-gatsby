@@ -25,7 +25,7 @@ const PriceDec = ({ price }) => <span className='price__decimals'>{priceDecimals
 export default ({ wine }) => (
   <div className='simpleCart_shelfItem c-wine'>
     <div className='image'>
-        {wine.type}
+
       <a>
 
           {(wine.type ==='red' && wine.premium) && (
@@ -70,9 +70,11 @@ export default ({ wine }) => (
             {wine.varietal}
           </h4>
         )}
-
+          {wine.availability && (
         <AddToCart item={wine} />
+          )}
 
+          {wine.availability && (
         <div className='wine__costs'>
           {wine.packaging && (
             <span className='content'>
@@ -84,11 +86,16 @@ export default ({ wine }) => (
             </span>
           )}
 
+            {!wine.availability && (
+                <span>Ausgetrunken. Ab Dezember wieder verfügbar</span>
+            )}
+
           <span className='c-price'>
             <PriceInt price={wine.price} />
             <PriceDec price={wine.price} />
           </span>
         </div>
+          )}
       </div>
     </div>
   </div>

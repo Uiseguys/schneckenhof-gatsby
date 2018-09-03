@@ -12,7 +12,6 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
     console.log('item:');
     console.log(item);
     item.id = item.id + '';
-    item.mytype = item.type + '';
     const contentDigest = crypto
       .createHash(`md5`)
       .update(JSON.stringify(item))
@@ -25,7 +24,6 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
         type,
       },
     };
-
     createNode(Object.assign({}, nodeBase, item))
   });
 
