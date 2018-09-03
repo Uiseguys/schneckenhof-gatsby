@@ -86,7 +86,7 @@ export default ({ wine }) => (
             </span>
           )}
 
-            {!wine.availability && (
+            {wine.availability === false && (
                 <span>Ausgetrunken. Ab Dezember wieder verfügbar</span>
             )}
 
