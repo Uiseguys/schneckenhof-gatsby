@@ -17,9 +17,11 @@ import champagneImage from '../assets/images/wines/sekt.jpg'
 const priceInt = (price) => Math.floor(price)
 const priceDecimals = (price) => Math.round((price - priceInt(price)) * 100)
 
+
 const PriceInt = ({ price }) => <span className='price__int'>{priceInt(price)}</span>
 
 const PriceDec = ({ price }) => <span className='price__decimals'>{priceDecimals(price) ? priceDecimals(price) : '00'}</span>
+const NotAvailableMessage = ({ availability }) => <span>{ availability ? 'true' : 'Ausgetrunken. Ab September wieder verfügbar' }</span>;
 
 
 export default ({ wine }) => (
@@ -86,16 +88,14 @@ export default ({ wine }) => (
             </span>
           )}
 
-            {wine.availability === false && (
-                <span>Ausgetrunken. Ab Dezember wieder verfügbar</span>
-            )}
-
           <span className='c-price'>
             <PriceInt price={wine.price} />
             <PriceDec price={wine.price} />
           </span>
         </div>
           )}
+          <NotAvailableMessage availability={wine.availability} />
+
       </div>
     </div>
   </div>
