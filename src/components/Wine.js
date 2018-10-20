@@ -21,7 +21,7 @@ const priceDecimals = (price) => Math.round((price - priceInt(price)) * 100)
 const PriceInt = ({ price }) => <span className='price__int'>{priceInt(price)}</span>
 
 const PriceDec = ({ price }) => <span className='price__decimals'>{priceDecimals(price) ? priceDecimals(price) : '00'}</span>
-const NotAvailableMessage = ({ availability }) => <span>{ availability ? 'true' : 'Ausgetrunken. Ab September wieder verfügbar' }</span>;
+const NotAvailableMessage = ({ availability }) => <span>{ availability ? '' : 'Ausgetrunken. Ab September wieder verfügbar' }</span>;
 
 
 export default ({ wine }) => (
@@ -29,34 +29,8 @@ export default ({ wine }) => (
     <div className='image'>
 
       <a>
+          <img src={wine.image} />
 
-          {(wine.type ==='red' && wine.premium) && (
-            <img src={redwinePremiumImage} />
-          )}
-          {(wine.type ==='red' && !wine.premium) && (
-              <img src={redwineImage} />
-          )}
-
-          {(wine.type ==='white' && wine.premium) && (
-              <img src={whitewinePremiumImage} />
-          )}
-          {(wine.type ==='white' && !wine.premium) && (
-              <img src={whitewineImage} />
-          )}
-
-          {(wine.type ==='rose' && wine.premium) && (
-              <img src={rosewinePremiumImage} />
-          )}
-          {(wine.type ==='rose' && !wine.premium) && (
-              <img src={rosewineImage} />
-          )}
-
-          {(wine.type ==='champagne' && wine.premium) && (
-              <img src={champagneImage} />
-          )}
-          {(wine.type ==='champagne' && !wine.premium) && (
-              <img src={champagneImage} />
-          )}
       </a>
     </div>
 
