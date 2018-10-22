@@ -4,14 +4,6 @@ import AddToCart from './AddToCart'
 import AwwardBadge from './AwardBadge'
 
 const onWineChange = (wine) => {};
-import redwineImage from '../assets/images/wines/rot_liter.jpg'
-import redwinePremiumImage from '../assets/images/wines/rot_premium.jpg'
-import whitewineImage from '../assets/images/wines/weiss_liter.jpg'
-import whitewinePremiumImage from '../assets/images/wines/weiss_premium.jpg'
-import rosewineImage from '../assets/images/wines/rose_liter.jpg'
-import rosewinePremiumImage from '../assets/images/wines/rose.jpg'
-import champagneImage from '../assets/images/wines/sekt.jpg'
-
 
 
 const priceInt = (price) => Math.floor(price)
