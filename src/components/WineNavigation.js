@@ -24,8 +24,6 @@ export default ({ location }) => (
       </ul>
     </nav>
 
-    <div className='price-badge'>
-      <img src='/assets/images/badge.svg' />
-    </div>
+
   </div>
 )

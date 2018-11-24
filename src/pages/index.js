@@ -31,7 +31,12 @@ const IndexPage = ({ i18n }) => (
       </div>
 
       <div>
-        <img src={badge} />
+          <div class="info">
+              <h4>
+                  Weihnachtsmarkt am ersten Adventswochenende. Adventszauber im Schneckenhof<br />
+                  Sa. 1.12. ab 15 Uhr &  So. 2.12. ab 11 Uhr </h4>
+          </div>
+
       </div>
     </header>
 
