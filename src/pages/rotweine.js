@@ -3,7 +3,7 @@ import React from 'react'
 import SubpageHeader from '../components/SubpageHeader'
 import WineNavigation from '../components/WineNavigation'
 import Wines from '../components/Wines'
-import { WineFragment } from '../fragments'
+// import { WineFragment } from '../fragments'
 import { filterPremium } from '../util'
 
 export default ({ location, data }) => (

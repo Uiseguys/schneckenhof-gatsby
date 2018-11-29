@@ -6,7 +6,7 @@ import vinyard3 from '../assets/images/vinyard3.jpg'
 import SubpageHeader from '../components/SubpageHeader'
 
 export default () => (
-  <div class='content-container'>
+  <div className='content-container'>
     <SubpageHeader />
 
     <h2>
@@ -18,7 +18,7 @@ export default () => (
         <img src={vinyard2} />
         <img src={vinyard3} />
       </div>
-      <div class='text'>
+      <div className='text'>
         <h4>Qualitätsweine</h4>
         <p>
           Zumeist in der Literflasche. Traditionell ausgebaut mit hohem Qualitätsanspruch.<br />

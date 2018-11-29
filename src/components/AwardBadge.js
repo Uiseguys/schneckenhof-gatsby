@@ -7,20 +7,20 @@ let box = css({
   position: 'absolute',
   right: '20px',
   top: '0px',
-  '& .badge': { width: '50px', height: '50px', 'border-radius': '50%',  },
-  '& .silver': {'background-color': 'silver'},
-  '& .gold': {'background-color': 'gold'},
-  '& .bronze': {'background-color': 'orange'},
+  '& .badge': { width: '50px', height: '50px', 'borderRadius': '50%',  },
+  '& .silver': {'backgroundColor': 'silver'},
+  '& .gold': {'backgroundColor': 'gold'},
+  '& .bronze': {'backgroundColor': 'orange'},
   '& .text': {
     display: 'none',
     position: 'absolute',
     top: '50px',
     right: 0,
-    'background-color': '#333333',
-    'box-shadow': '2px 2px 4px -1px #888',
+    'backgroundColor': '#333333',
+    'boxShadow': '2px 2px 4px -1px #888',
     color: 'white',
     padding: '4px',
-    'white-space': 'nowrap'
+    'whiteSpace': 'nowrap'
   },
   ':hover .text': { display: 'block' }
 })

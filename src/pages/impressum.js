@@ -4,16 +4,16 @@ import SubpageHeader from '../components/SubpageHeader'
 import { restaurant1, restaurant2, restaurant3 } from '../assets'
 
 export default () => (
-  <div class='content-container'>
+  <div className='content-container'>
     <SubpageHeader />
 
     <h2>Impressum</h2>
-    <div class='subpage-content meta-info'>
-      <div class='text'>
+    <div className='subpage-content meta-info'>
+      <div className='text'>
         <p>
           Verantwortlich für die Inhalte unter www.weingut-schneckenhof.de:<br />
           <br />
-          <span class='centered'>
+          <span className='centered'>
             Schneckenhof - Weingut Müller<br />
             Alexandra Siller<br />
             <br />
@@ -36,8 +36,8 @@ export default () => (
 
         <h5>Haftung für Inhalte</h5>
         <p>
-          Als Diensteanbieter sind wir gemäß § 7 Abs.1 <span class='caps'>TMG</span> für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
-          verantwortlich. Nach §§ 8 bis 10 <span class='caps'>TMG</span> sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte
+          Als Diensteanbieter sind wir gemäß § 7 Abs.1 <span className='caps'>TMG</span> für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+          verantwortlich. Nach §§ 8 bis 10 <span className='caps'>TMG</span> sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte
           fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung
           oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab
           dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte

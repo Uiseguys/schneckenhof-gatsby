@@ -10,7 +10,7 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
   const type = 'Wine';
   data.map(item => {
     console.log('item:');
-    console.log(item);
+    console.log(item); 
     item.id = item.id + '';
     const contentDigest = crypto
       .createHash(`md5`)

@@ -4,13 +4,13 @@ import SubpageHeader from '../components/SubpageHeader'
 import { restaurant1, restaurant2, restaurant3 } from '../assets'
 
 export default () => (
-  <div class='content-container'>
+  <div className='content-container'>
     <SubpageHeader />
 
     <h2>Liefer- &amp; Versandbedingungen</h2>
-	<div class="subpage-content meta-info">
+	<div className="subpage-content meta-info">
 
-		<div class="text">
+		<div className="text">
 
 			<h4>Innerhalb Deutschlands</h4>
 			<p>

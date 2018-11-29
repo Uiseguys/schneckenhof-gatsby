@@ -4,7 +4,7 @@ import SubpageHeader from '../components/SubpageHeader'
 import { restaurant1, restaurant2, restaurant3 } from '../assets'
 
 export default () => (
-  <div class='content-container'>
+  <div className='content-container'>
     <SubpageHeader />
 
     <h2>Unser Gasthaus</h2>

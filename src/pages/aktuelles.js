@@ -89,11 +89,11 @@ export default () => (
       </div>
 
       <div className='c-news'>
-        <div class='item'>
-          <div class='date'>
-            <span class='day'>6-8</span>
+        <div className='item'>
+          <div className='date'>
+            <span className='day'>6-8</span>
             <br />
-            <span class='month'>Juli</span>
+            <span className='month'>Juli</span>
           </div>
 
           <div className='description'>
@@ -110,11 +110,11 @@ export default () => (
       </div>
 
       <div className='c-news'>
-        <div class='item'>
-          <div class='date'>
-            <span class='day'>21</span>
+        <div className='item'>
+          <div className='date'>
+            <span className='day'>21</span>
             <br />
-            <span class='month'>Jul</span>
+            <span className='month'>Jul</span>
           </div>
 
           <div className='description'>
@@ -134,11 +134,11 @@ export default () => (
       </div>
 
       <div className='c-news'>
-        <div class='item'>
-          <div class='date'>
-            <span class='day'>25</span>
+        <div className='item'>
+          <div className='date'>
+            <span className='day'>25</span>
             <br />
-            <span class='month'>Jul</span>
+            <span className='month'>Jul</span>
           </div>
 
           <div className='description'>
@@ -160,11 +160,11 @@ export default () => (
       </div>
 
       <div className='c-news'>
-        <div class='item'>
-          <div class='date'>
-            <span class='day'>3</span>
+        <div className='item'>
+          <div className='date'>
+            <span className='day'>3</span>
             <br />
-            <span class='month'>Okt</span>
+            <span className='month'>Okt</span>
           </div>
 
           <div className='description'>
@@ -178,13 +178,13 @@ export default () => (
       </div>
 
       <div className='c-news'>
-        <div class='item'>
-          <div class='date'>
-            <span class='day'>
-              1<span class='separator'>+</span>2
+        <div className='item'>
+          <div className='date'>
+            <span className='day'>
+              1<span className='separator'>+</span>2
             </span>
             <br />
-            <span class='month'>Dez</span>
+            <span className='month'>Dez</span>
           </div>
 
           <div className='description'>

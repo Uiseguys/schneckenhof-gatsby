@@ -8,6 +8,7 @@ export const WineFragment = graphql`
     vintage
     varietal
     price
+    priority
     content
     awardText
     availability
