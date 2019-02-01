@@ -11,11 +11,11 @@ export default ({ news  }) => (
                     <div className='date'>
                         <span className='day'>
                         {new Date(newsdata.node.startDate).getUTCDate()}
-                        <span className='month'>{new Date(newsdata.node.startDate).toLocaleString('en-us', { month: 'long' })}</span>
+                        <span className='month'>{new Date(newsdata.node.startDate).toLocaleString('en-us', { month: 'short' })}</span>
                         <span className='separator'>-</span>
                         {new Date(newsdata.node.endDate).getUTCDate()}
                         <br/>
-                        <span className='month'>{new Date(newsdata.node.endDate).toLocaleString('en-us', { month: 'long' })}</span>
+                        <span className='month'>{new Date(newsdata.node.endDate).toLocaleString('en-us', { month: 'short' })}</span>
                         </span>
                     </div>):
                     <div className='date'>
@@ -23,7 +23,7 @@ export default ({ news  }) => (
                             {new Date(newsdata.node.startDate).getUTCDate()}
                         </span>
                         <br />
-                        <span className='month'>{new Date(newsdata.node.startDate).toLocaleString('en-us', { month: 'long' })}</span>
+                        <span className='month'>{new Date(newsdata.node.startDate).toLocaleString('en-us', { month: 'short' })}</span>
                      </div>
                 }
                 <div className='description'>
