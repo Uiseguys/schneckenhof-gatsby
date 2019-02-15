@@ -33,8 +33,8 @@ const IndexPage = ({ i18n }) => (
       <div>
           <div className="info">
               <h4>
-                  Weihnachtsmarkt am ersten Adventswochenende. Adventszauber im Schneckenhof<br />
-                  Sa. 1.12. ab 15 Uhr &  So. 2.12. ab 11 Uhr </h4>
+                  REBENGLÜHEN<br />
+                  Freitag 22. März und Samstag 23. März 18-23 Uhr, Sonntag 24. März 2019 11-18 Uhr </h4>
           </div>
 
       </div>
