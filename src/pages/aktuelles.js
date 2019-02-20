@@ -21,7 +21,8 @@ export default (data) => (
           <a href='http://www.weingut-schneckenhof.blogspot.com/' target='_blank'>
               www.weingut-schneckenhof.blogspot.com
           </a>
-
+<br />
+<br />
           <a href='http://www.facebook.com/WeingutSchneckenhof' target='_blank'>
               www.facebook.com/WeingutSchneckenhof
           </a>
