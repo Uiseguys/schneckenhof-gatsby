@@ -18,11 +18,12 @@ export default (data) => (
           <span>Der Blog vom Schneckenhof!</span> Begleiten Sie uns durch das Jahr im Weinberg und Keller, auf
           Weinfestesten und Veranstaltungen. Auf unserem Blog und auf Facebook informieren wir Sie immer wieder was es
           Neues im Schneckenhof gibt:
+          <br />
           <a href='http://www.weingut-schneckenhof.blogspot.com/' target='_blank'>
               www.weingut-schneckenhof.blogspot.com
           </a>
-<br />
-<br />
+
+            <br />
           <a href='http://www.facebook.com/WeingutSchneckenhof' target='_blank'>
               www.facebook.com/WeingutSchneckenhof
           </a>
