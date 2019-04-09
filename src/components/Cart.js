@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 const CartItem = ({ item, add, remove }) => (
   <div className="itemRow">
@@ -22,7 +22,7 @@ const CartItem = ({ item, add, remove }) => (
       </a>
     </div>
   </div>
-)
+);
 
 const Cart = ({
   checkout,
@@ -33,17 +33,17 @@ const Cart = ({
   items,
   add,
   remove,
-  clear,
+  clear
 }) =>
   count > 0 && (
     <div
-      className={'cart ' + (checkout ? 'checkout' : '')}
+      className={"cart " + (checkout ? "checkout" : "")}
       role="button"
       ref={c => {
         if (c) {
-          c.addEventListener('click', () => {
-            return true
-          })
+          c.addEventListener("click", () => {
+            return true;
+          });
         }
       }}
     >
@@ -83,7 +83,7 @@ const Cart = ({
         </div>
       </div>
     </div>
-  )
+  );
 
 Cart.propTypes = {
   count: PropTypes.number.isRequired,
@@ -93,21 +93,21 @@ Cart.propTypes = {
   items: PropTypes.array.isRequired,
   add: PropTypes.func.isRequired,
   clear: PropTypes.func.isRequired,
-  remove: PropTypes.func.isRequired,
-}
+  remove: PropTypes.func.isRequired
+};
 
 const mapStateToProps = ({ count, items, shipping, total, grandTotal }) => {
-  return { count, items, shipping, total, grandTotal }
-}
+  return { count, items, shipping, total, grandTotal };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
     add: (item, quantity = 1) =>
-      dispatch({ type: 'ADD', payload: { item, quantity } }),
+      dispatch({ type: "ADD", payload: { item, quantity } }),
     remove: (item, quantity = 1) =>
-      dispatch({ type: 'REMOVE', payload: { item, quantity } }),
-    clear: () => dispatch({ type: 'CLEAR' }),
-  }
-}
+      dispatch({ type: "REMOVE", payload: { item, quantity } }),
+    clear: () => dispatch({ type: "CLEAR" })
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart)
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

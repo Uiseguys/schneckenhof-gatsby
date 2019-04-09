@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import SubpageHeader from '../components/SubpageHeader'
-import WineNavigation from '../components/WineNavigation'
-import Wines from '../components/Wines'
+import SubpageHeader from "../components/SubpageHeader";
+import WineNavigation from "../components/WineNavigation";
+import Wines from "../components/Wines";
 // import { WineFragment } from '../fragments'
-import { filterPremium } from '../util'
+import { filterPremium } from "../util";
 
 export default ({ location, data }) => (
-  <div className='content-container'>
+  <div className="content-container">
     <SubpageHeader />
 
     <WineNavigation location={location} />
@@ -18,7 +18,7 @@ export default ({ location, data }) => (
     <h2>Premium Rotweine</h2>
     <Wines wines={filterPremium(data, true)} />
   </div>
-)
+);
 
 export const query = graphql`
   query RedWineQuery {
@@ -30,4 +30,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -19,4 +19,4 @@ export const WineFragment = graphql`
       unitOfMeasure
     }
   }
-`
+`;

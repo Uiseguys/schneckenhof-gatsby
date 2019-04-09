@@ -3,7 +3,7 @@ import React from "react";
 export default () => (
   <div className="content-container">
     <div className="checkout">
-      <h4>Vielen Dank für Ihre Bestellung!</h4>
+      <h4>Serverfehler, bitte versuchen Sie es erneut!</h4>
 
       <br />
       <br />
