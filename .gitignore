@@ -9,3 +9,4 @@ yarn-error.log
 /yarn.lock
 .idea/frontend.iml
 .idea/misc.xml
+encodings.xml
