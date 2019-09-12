@@ -12,7 +12,10 @@ export default ({ location, data }) => (
     <WineNavigation location={location} />
 
     <h2>Roséweine</h2>
-    <Wines wines={data.allWine.edges.map(edge => edge.node)} />
+
+<p>Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder möglich sein.</p>
+
+  //  <Wines wines={data.allWine.edges.map(edge => edge.node)} />
   </div>
 );
 

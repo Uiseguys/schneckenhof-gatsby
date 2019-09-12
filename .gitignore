@@ -10,3 +10,7 @@ yarn-error.log
 .idea/frontend.iml
 .idea/misc.xml
 encodings.xml
+.idea/codeStyles/Project.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/profiles_settings.xml
