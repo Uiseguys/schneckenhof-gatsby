@@ -12,13 +12,16 @@ export default ({ location, data }) => (
 
     <WineNavigation location={location} />
 
-
-
     <h2>Rotweine</h2>
-{/*    <Wines wines={filterPremium(data, false)} />  */}
-    <h3>Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder möglich sein.</h3>
-{/*     <h2>Premium Rotweine</h2>*/}
-{/*     <Wines wines={filterPremium(data, true)} />*/}
+    <Wines wines={filterPremium(data, false)} />
+    {
+      //<h3>
+      //Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
+      //möglich sein.
+      //</h3>
+    }
+    <h2>Premium Rotweine</h2>
+    <Wines wines={filterPremium(data, true)} />
   </div>
 );
 
