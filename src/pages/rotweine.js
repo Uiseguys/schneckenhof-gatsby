@@ -15,9 +15,9 @@ export default ({ location, data }) => (
     <h2>Rotweine</h2>
     <Wines wines={filterPremium(data, false)} />
     {
-      //<h3>
+      //<h3><br /><br />
       //Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
-      //möglich sein.
+      //möglich sein.<br /><br /><br />
       //</h3>
     }
     <h2>Premium Rotweine</h2>
