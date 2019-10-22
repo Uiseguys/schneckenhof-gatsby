@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators
   const data = await fetch(
-    `https://schneckenhof-lb4-api.herokuapp.com/Settings`
+    `https://schneckenhof-lb4-live.herokuapp.com/settings`
   ).then(res => res.json());
   const type = 'settings';
   
