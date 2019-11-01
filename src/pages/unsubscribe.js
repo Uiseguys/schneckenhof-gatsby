@@ -6,7 +6,7 @@ export default () => (
   <div className="content-container" id="unsubscribe-body">
     <SubpageHeader />
 
-    <h2>YOU HAVE SUCCESSFULY UNSUBSCRIBED</h2>
+    <h2>YOU HAVE SUCCESSFULY BEEN UNSUBSCRIBED</h2>
     <div className="subpage-content">
       <div className="text">
         <p>
