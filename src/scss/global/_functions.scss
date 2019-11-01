@@ -1,0 +1,17 @@
+// Retrieve color Sass maps
+@function color($key: "green") {
+  @return map-get($colors, $key);
+}
+
+@function theme-color($key: "success") {
+  @return map-get($theme-colors, $key);
+}
+
+// Request a theme color level
+@function theme-color-level($color-name: "success", $level: 0) {
+  $color: theme-color($color-name);
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}

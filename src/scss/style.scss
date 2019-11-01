@@ -3,13 +3,20 @@
 
 // global stuff
 @import "global/vars";
-
 @import "global/prebase";
 @import "global/base";
 @import "global/helper";
 @import "global/media";
 @import "global/normalize";
 @import "global/print";
+
+// Bootstrap 4
+@import "global/mixins/border-radius";
+@import "global/mixins/alert";
+@import "global/mixins/gradients";
+@import "global/functions";
+@import "global/vendor/rfs";
+@import "global/alert";
 
 // custom
 @import "custom/main";
