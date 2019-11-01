@@ -382,3 +382,19 @@ footer {
     background-color: rgba(255, 255, 255, 0.6);
   }
 }
+
+#unsubscribe-body {
+  min-height: 100vh;
+  .subpage-content {
+    .text {
+      max-width: none;
+      padding: 15vh 20%;
+      p {
+        span {
+          font-size: 3rem;
+        }
+        width: 100% !important;
+      }
+    }
+  }
+}
