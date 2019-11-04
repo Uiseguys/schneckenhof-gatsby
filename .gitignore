@@ -6,7 +6,7 @@ yarn-error.log
 
 # Build directory
 /public
-/yarn.lock
+/package-lock.json
 .idea/frontend.iml
 .idea/misc.xml
 encodings.xml
