@@ -46,13 +46,6 @@ const Cart = ({
     <div
       className={checkCheckout(checkout)}
       role="button"
-      ref={c => {
-        if (c) {
-          c.addEventListener("click", () => {
-            return true;
-          });
-        }
-      }}
     >
       <div className="summary">
         <div className="quantity simpleCart_quantity">{count}</div>
