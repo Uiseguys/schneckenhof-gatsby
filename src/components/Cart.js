@@ -45,9 +45,11 @@ const Cart = ({
       role="button"
       ref={c => {
         if (c) {
-          c.addEventListener("click", () => {
+          window.addEventListener("DOMContentLoaded", () => {
             c.setAttribute("class", "cart" + (checkout ? " checkout" : ""));
             c.setAttribute("role", "button");
+          })
+          c.addEventListener("click", () =>  {
             return true;
           });
         }
