@@ -24,12 +24,9 @@ const CartItem = ({ item, add, remove }) => (
   </div>
 );
 
-const checkCheckout = (checkout) => {
-  if (checkout) {
-    return "cart checkout";
-  }
-  return "cart";
-}
+const cartStyles = () => {
+  this.refs.c
+} 
 
 const Cart = ({
   checkout,
@@ -44,8 +41,17 @@ const Cart = ({
 }) =>
   count > 0 && (
     <div
-      className={checkCheckout(checkout)}
+      className={"cart" + (checkout ? " checkout" : "")}
       role="button"
+      ref={c => {
+        if (c) {
+          c.addEventListener("click", () => {
+            return true;
+            c.setAttribute("class", "cart" + (checkout ? " checkout" : ""));
+            c.setAttribute("role", "button");
+          });
+        }
+      }}
     >
       <div className="summary">
         <div className="quantity simpleCart_quantity">{count}</div>
