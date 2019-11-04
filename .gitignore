@@ -3,11 +3,11 @@
 .cache
 node_modules
 yarn-error.log
+package-lock.json
+yarn.lock
 
 # Build directory
 /public
-package-lock.json
-yarn.lock
 .idea/frontend.iml
 .idea/misc.xml
 encodings.xml
