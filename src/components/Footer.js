@@ -29,7 +29,7 @@ const Footer = () => {
       .then(data => {
         //handle success
         setAlertClasses("alert alert-success");
-        setAlertMessage("Your email has been registered successfully");
+        setAlertMessage("Ihre Email wurde in den Verteiler aufgenommen");
         setAlertOpacity("1");
         setTimeout(() => {
           setAlertOpacity("0");
@@ -38,7 +38,7 @@ const Footer = () => {
       .catch(() => {
         //handle error
         setAlertClasses("alert alert-danger");
-        setAlertMessage("Your email failed to register");
+        setAlertMessage("Die Registrierung war nicht erfolgreich. Bitte versuchen Sie es noch einmal");
         setAlertOpacity("1");
         setTimeout(() => {
           setAlertOpacity("0");
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
           <button type="submit" className="btn btn-link">
-            Subscribe
+            Anmelden
           </button>
         </form>
       </aside>
