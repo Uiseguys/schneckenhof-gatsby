@@ -46,9 +46,9 @@ const Cart = ({
       ref={c => {
         if (c) {
           c.addEventListener("click", () => {
-            return true;
             c.setAttribute("class", "cart" + (checkout ? " checkout" : ""));
             c.setAttribute("role", "button");
+            return true;
           });
         }
       }}
