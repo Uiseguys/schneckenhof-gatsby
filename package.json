@@ -32,6 +32,7 @@
     "cross-env": "^5.1.4",
     "cross-fetch": "^2.1.0",
     "formdata-polyfill": "^3.0.10",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-glamor": "^1.6.13",
@@ -43,6 +44,7 @@
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "webpack": "^1.4.0-beta6",
     "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
