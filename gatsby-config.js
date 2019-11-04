@@ -9,6 +9,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     'gatsby-plugin-postcss-sass',
+    'gatsby-plugin-glamor',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
