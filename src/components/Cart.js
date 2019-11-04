@@ -24,6 +24,13 @@ const CartItem = ({ item, add, remove }) => (
   </div>
 );
 
+const checkCheckout = () => {
+  if (checkout) {
+    return "cart checkout";
+  }
+  return "cart";
+}
+
 const Cart = ({
   checkout,
   count,
@@ -37,7 +44,7 @@ const Cart = ({
 }) =>
   count > 0 && (
     <div
-      className={"cart " + (checkout ? "checkout" : "")}
+      className={checkCheckout()}
       role="button"
       ref={c => {
         if (c) {
