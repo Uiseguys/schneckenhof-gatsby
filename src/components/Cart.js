@@ -37,7 +37,7 @@ const Cart = ({
 }) =>
   count > 0 && (
     <div
-      className={"cart " + (checkout ? "checkout" : "")}
+      className={`cart ${(checkout) ? "checkout" : ""}`}
       role="button"
       ref={c => {
         if (c) {
