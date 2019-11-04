@@ -32,7 +32,7 @@ const IndexPage = ({ i18n, data }) => (
       </div>
 
       <div>
-        <div className="info" onclick="openNews()">
+        <div className="info" onClick="openNews()">
         <a href = '/aktuelles'>
 
        
