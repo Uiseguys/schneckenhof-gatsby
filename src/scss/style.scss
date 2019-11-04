@@ -1,6 +1,13 @@
 // 3rd party
 // @import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+// Bootstrap 4 Mixins and Functions
+@import "global/mixins/border-radius";
+@import "global/mixins/alert";
+@import "global/mixins/gradients";
+@import "global/functions";
+@import "global/vendor/rfs";
+
 // global stuff
 @import "global/vars";
 @import "global/prebase";
@@ -10,18 +17,13 @@
 @import "global/normalize";
 @import "global/print";
 
-// Bootstrap 4
-@import "global/mixins/border-radius";
-@import "global/mixins/alert";
-@import "global/mixins/gradients";
-@import "global/functions";
-@import "global/vendor/rfs";
-@import "global/alert";
-
 // custom
 @import "custom/main";
 @import "custom/shop";
 @import "custom/cart";
 @import "custom/navigation";
 @import "custom/coin";
+
+// Bootstrap 4 Component
+@import "global/alert";
 
