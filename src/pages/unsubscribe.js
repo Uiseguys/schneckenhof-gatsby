@@ -6,13 +6,12 @@ export default () => (
   <div className="content-container" id="unsubscribe-body">
     <SubpageHeader />
 
-    <h2>YOU HAVE SUCCESSFULY BEEN UNSUBSCRIBED</h2>
+    <h2>Email abgemeldet</h2>
     <div className="subpage-content">
       <div className="text">
         <p>
           <span>😔</span>
-          We are sorry to see you go, remember you can always resubscribe to our
-          newsletter by entering your email below on our footer
+          Sie können sich jederzeit wieder registrieren.
         </p>
       </div>
     </div>
