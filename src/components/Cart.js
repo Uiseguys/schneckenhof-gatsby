@@ -53,7 +53,12 @@ const Cart = ({
         }
       }}
     >
-      <div className="summary">
+      <div
+        className="summary" 
+        ref={s => {
+          s.setAttribute("class", "summary");
+        }}
+      >
         <div className="quantity simpleCart_quantity">{count}</div>
         <span className="icon-i_basket" />
         <div className="grand-total simpleCart_grandTotal">
