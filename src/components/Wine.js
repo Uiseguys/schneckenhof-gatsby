@@ -19,7 +19,7 @@ const PriceDec = ({ price }) => (
 );
 const NotAvailableMessage = ({ availability }) => (
   <span>
-    {availability ? "" : "Ausgetrunken. Ab September wieder verfügbar"}
+    {availability ? "" : "Ausgetrunken"}
   </span>
 );
 
