@@ -7,7 +7,7 @@ import Cart from "../components/Cart";
 
 const windowGlobal = typeof window !== "undefined" && window;
 //const CHECKOUT_URL = "https://schneckenhof-lb4-live.herokuapp.com/payment/checkout";
-const CHECKOUT_URL = "http://localhost:3000/payment/checkout";
+const CHECKOUT_URL = "https://schneckenhof-lb4-live.herokuapp.com/payment/checkout";
 // const CHECKOUT_URL =
 // 'https://calm-cliffs-35577.herokuapp.com/payment/checkout'
 class Checkout extends React.Component {
