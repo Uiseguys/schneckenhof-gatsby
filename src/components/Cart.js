@@ -44,9 +44,9 @@ const Cart = ({
       className={"cart" + (checkout ? " checkout" : "")}
       role="button"
       ref={c => {
-        c.setAttribute("class", "cart" + (checkout ? " checkout" : ""));
-        c.setAttribute("role", "button");
         if (c) {
+          c.setAttribute("class", "cart" + (checkout ? " checkout" : ""));
+          c.setAttribute("role", "button");
           c.addEventListener("click", () =>  {
             return true;
           });
@@ -56,20 +56,26 @@ const Cart = ({
       <div
         className="summary" 
         ref={s => {
-          s.setAttribute("class", "summary");
+          if(s) {
+            s.setAttribute("class", "summary");
+          }
         }}
       >
         <div
           className="quantity simpleCart_quantity"
           ref={q => {
-            q.setAttribute("class", "quantity simpleCart_quantity");
+            if(q) {
+              q.setAttribute("class", "quantity simpleCart_quantity");
+            }
           }}
           >{count}</div>
         <span className="icon-i_basket" />
         <div
           className="grand-total simpleCart_grandTotal"
           ref={g => {
-            g.setAttribute("class", "grand-total simpleCart_grandTotal");
+            if(g) {
+              g.setAttribute("class", "grand-total simpleCart_grandTotal");
+            }
           }}
         >
           €{grandTotal.toFixed(2)}
