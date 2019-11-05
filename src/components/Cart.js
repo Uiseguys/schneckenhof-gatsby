@@ -61,7 +61,12 @@ const Cart = ({
       >
         <div className="quantity simpleCart_quantity">{count}</div>
         <span className="icon-i_basket" />
-        <div className="grand-total simpleCart_grandTotal">
+        <div
+          className="grand-total simpleCart_grandTotal"
+          ref={g => {
+            g.setAttribute("class", "grand-total simpleCart_grandTotal");
+          }}
+        >
           €{grandTotal.toFixed(2)}
         </div>
       </div>
