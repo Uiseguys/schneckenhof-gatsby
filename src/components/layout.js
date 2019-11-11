@@ -13,6 +13,7 @@ import Cart from "./Cart"
 import Navigation from "../components/Navigation"
 import Footer from "./Footer"
 //import "./layout.css"
+import "../assets/icons/style.css"
 import "../scss/style.scss"
 
 const Layout = ({ children }) => {
