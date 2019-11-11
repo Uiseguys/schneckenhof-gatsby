@@ -1,29 +1,36 @@
-import React from "react";
-import accounting from "accounting";
-import AddToCart from "./AddToCart";
-import AwwardBadge from "./AwardBadge";
+import React from "react"
+import PropTypes from "prop-types"
+import accounting from "accounting"
+import AddToCart from "./AddToCart"
+import AwwardBadge from "./AwardBadge"
 
-const onWineChange = wine => { };
-
-const priceInt = price => Math.floor(price);
-const priceDecimals = price => Math.round((price - priceInt(price)) * 100);
+const priceInt = price => Math.floor(price)
+const priceDecimals = price => Math.round((price - priceInt(price)) * 100)
 
 const PriceInt = ({ price }) => (
   <span className="price__int">{priceInt(price)}</span>
-);
+)
+PriceInt.propTypes = {
+  price: PropTypes.string,
+}
 
 const PriceDec = ({ price }) => (
   <span className="price__decimals">
     {priceDecimals(price) ? priceDecimals(price) : "00"}
   </span>
-);
-const NotAvailableMessage = ({ availability }) => (
-  <span>
-    {availability ? "" : "Ausgetrunken"}
-  </span>
-);
+)
+PriceDec.propTypes = {
+  price: PropTypes.string,
+}
 
-export default ({ wine }) => (
+const NotAvailableMessage = ({ availability }) => (
+  <span>{availability ? "" : "Ausgetrunken"}</span>
+)
+NotAvailableMessage.propTypes = {
+  availability: PropTypes.bool,
+}
+
+const Wine = ({ wine }) => (
   <div className="simpleCart_shelfItem c-wine">
     <div className="image">
       <a>
@@ -36,9 +43,7 @@ export default ({ wine }) => (
     <div className="description">
       <div>
         {wine.vintage != 0 && (
-          <div className="wine__vintage">
-            {wine.vintage}
-          </div>
+          <div className="wine__vintage">{wine.vintage}</div>
         )}
         <h4 className="item_name">{wine.name ? wine.name : wine.varietal}</h4>
 
@@ -58,17 +63,19 @@ export default ({ wine }) => (
                     wine.packaging.measure + wine.packaging.unitOfMeasure}
                 </span>
                 {/* {wine.content < 1 && <span className='liter-price'>{accounting.formatMoney(wine.price / (wine.content * 100) * 100, '€', 2, '.', ',')}/l</span>} */}
-                {wine.packaging.unitOfMeasure != "l" && wine.packaging.measure < 1000 && (
-                  <span className="liter-price">
-                    {accounting.formatMoney(
-                      wine.price / wine.packaging.measure * 1000,
-                      "€",
-                      2,
-                      ".",
-                      ","
-                    )}/l
-                  </span>
-                )}
+                {wine.packaging.unitOfMeasure != "l" &&
+                  wine.packaging.measure < 1000 && (
+                    <span className="liter-price">
+                      {accounting.formatMoney(
+                        (wine.price / wine.packaging.measure) * 1000,
+                        "€",
+                        2,
+                        ".",
+                        ","
+                      )}
+                      /l
+                    </span>
+                  )}
               </span>
             )}
 
@@ -82,4 +89,10 @@ export default ({ wine }) => (
       </div>
     </div>
   </div>
-);
+)
+
+Wine.propTypes = {
+  wine: PropTypes.object,
+}
+
+export default Wine

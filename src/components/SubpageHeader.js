@@ -1,5 +1,5 @@
-import React from "react";
-import { logo } from "../assets";
+import React from "react"
+import { logo } from "../assets"
 export default () => (
   <header className="subpage">
     <div className="branding">
@@ -8,4 +8,4 @@ export default () => (
       </a>
     </div>
   </header>
-);
+)

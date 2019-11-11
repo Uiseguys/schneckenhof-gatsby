@@ -1,29 +1,39 @@
-const uuid = require("uuid");
-const crypto = require("crypto");
-const fetch = require("node-fetch");
+const axios = require("axios")
 
-exports.sourceNodes = async ({ boundActionCreators }) => {
-  const { createNode } = boundActionCreators;
-  const data = await fetch(
-    `https://schneckenhof-lb4-live.herokuapp.com/wines`
-  ).then(res => res.json());
-  const type = "Wine";
-  data.map(item => {
-    item.id = item.id + "";
-    const contentDigest = crypto
-      .createHash(`md5`)
-      .update(JSON.stringify(item))
-      .digest(`hex`);
-    const nodeBase = {
-      parent: null,
-      children: [],
-      internal: {
-        contentDigest,
-        type
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) => {
+  try {
+    const { createNode } = actions
+    const data = await axios({
+      method: "get",
+      url: "https://schneckenhof-lb4-live.herokuapp.com/wines",
+    }).then(res => {
+      return res.data
+    })
+    await data.forEach(item => {
+      item.showOnHome = item.showOnHome ? item.showOnHome : false
+      item.homePageDescription = item.homePageDescription
+        ? item.homePageDescription
+        : item.shortDescription
+      const nodeMeta = {
+        id: createNodeId(`wines-${item.id}`),
+        parent: null,
+        children: [],
+        internal: {
+          type: "Wines",
+          mediaType: `application/json`,
+          content: JSON.stringify(item),
+          contentDigest: createContentDigest(item),
+        },
       }
-    };
-    createNode(Object.assign({}, nodeBase, item));
-  });
-
-  return;
-};
+      const node = Object.assign({}, item, nodeMeta)
+      createNode(node)
+      return
+    })
+  } catch (err) {
+    console.log(err)
+  }
+}

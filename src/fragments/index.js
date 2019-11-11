@@ -1,5 +1,7 @@
+import { graphql } from "gatsby"
+
 export const WineFragment = graphql`
-  fragment WineFragment on Wine {
+  fragment WineFragment on Wines {
     type
     id
     name
@@ -19,4 +21,4 @@ export const WineFragment = graphql`
       unitOfMeasure
     }
   }
-`;
+`

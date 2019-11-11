@@ -17,7 +17,7 @@
   min-height: 520px;
   flex-basis: 12%;
 
-  @include media('<mobile-p') {
+  @include media("<mobile-p") {
     flex-basis: 82%;
     margin: 2% auto;
   }
@@ -142,7 +142,7 @@
   width: 180px;
   padding-top: 2.5rem;
 
-  @include media('<mobile-p') {
+  @include media("<mobile-p") {
     position: relative;
     display: block;
     width: auto;
@@ -155,7 +155,7 @@
     padding: 0;
     margin-left: 2%;
 
-    @include media('<mobile-p') {
+    @include media("<mobile-p") {
       text-align: center;
     }
 

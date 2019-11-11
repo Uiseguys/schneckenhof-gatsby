@@ -1,29 +1,31 @@
-import React from "react";
+import { Component } from "react"
 
-let stylesStr;
+import "./scss/style.scss"
+
+let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`);
+    stylesStr = require(`!raw-loader!../public/styles.css`)
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 }
 
-module.exports = class HTML extends React.Component {
+class HTML extends Component {
   render() {
-    let css;
+    let css
     if (process.env.NODE_ENV === `production`) {
       css = (
         <style
           id="gatsby-inlined-css"
           dangerouslySetInnerHTML={{ __html: stylesStr }}
         />
-      );
+      )
     }
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
+          {/*<script src="https://cdn.polyfill.io/v2/polyfill.min.js" />*/}
 
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -46,10 +48,12 @@ module.exports = class HTML extends React.Component {
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(l){var i,s={touchend:function(){}};for(i in s)l.addEventListener(i,s)})(document); // sticky hover fix in iOS"
+              "(function(l){var i,s={touchend:function(){}};for(i in s)l.addEventListener(i,s)})(document); // sticky hover fix in iOS",
           }}
         />
       </html>
-    );
+    )
   }
-};
+}
+
+export default HTML

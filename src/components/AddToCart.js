@@ -1,41 +1,42 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { useState } from "react"
+import PropTypes from "prop-types"
+import { useDispatch } from "react-redux"
+import { add } from "../state/actions/index"
 
-class AddToCart extends React.Component {
-  render() {
-    const { add, item } = this.props;
-    return (
-      <div className="shop-link">
-        <div className="input">
-          <input
-            type="text"
-            defaultValue="1"
-            className="item_Quantity"
-            ref="quant"
-          />
-          <br />
-        </div>
-        <div className="button">
-          <a
-            className="item_add"
-            href="javascript:;"
-            onClick={() => add(+this.refs.quant.value, item)}
-          >
-            <span className="icon-i_basket" />
-          </a>
-        </div>
-      </div>
-    );
+const AddToCart = ({ item }) => {
+  const dispatch = useDispatch()
+  const [quantity, setQuantity] = useState(1)
+
+  const handleQuantityInput = e => {
+    setQuantity(parseInt(e.target.value))
   }
+
+  return (
+    <div className="shop-link">
+      <div className="input">
+        <input
+          type="text"
+          className="item_Quantity"
+          onChange={handleQuantityInput}
+          value={quantity}
+        />
+        <br />
+      </div>
+      <div className="button">
+        <a
+          className="item_add"
+          href="javascript:void(0);"
+          onClick={() => dispatch(add(quantity, item))}
+        >
+          <span className="icon-i_basket" />
+        </a>
+      </div>
+    </div>
+  )
 }
 
-const mapStateToProps = () => ({});
-const mapDispatchToProps = dispatch => {
-  return {
-    add: (quantity = 1, item) =>
-      dispatch({ type: `ADD`, payload: { quantity, item } })
-  };
-};
+AddToCart.propTypes = {
+  item: PropTypes.object,
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddToCart);
+export default AddToCart

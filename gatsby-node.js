@@ -1,23 +1,11 @@
-const { languages, defaultLanguage } = require('./src/i18n-config')
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
 
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage, deletePage } = boundActionCreators
+// You can delete this file if you're not using it
 
-  return new Promise((resolve, reject) => {
-    deletePage(page)
-    languages.map((language) => {
-      let newPage = Object.assign({}, page, {
-        originalPath: page.path,
-        path: language === defaultLanguage ? page.path : '/' + language + page.path,
-        context: {
-          lang: language
-        }
-      })
-
-      // console.log('creating', newPage)
-      createPage(newPage)
-    })
-
-    resolve()
-  })
-}
+//module.exports.createPages = async ({ graphql, actions }) => {
+//const {createPage, deletePage} = actions
+//})

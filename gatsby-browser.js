@@ -1,21 +1,26 @@
-import 'babel-polyfill'
-import 'formdata-polyfill'
-import 'whatwg-fetch'
+/**
+ * Implement Gatsby's Browser APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/browser-apis/
+ */
 
-import React from 'react'
-import { Router } from 'react-router-dom'
-import { Provider } from 'react-redux'
+// You can delete this file if you're not using it
+//require("regenerator-runtime")
+//require("core-js")
 
-import createStore from './src/state/createStore'
+const React = require("react")
+const { BrowserRouter } = require("react-router-dom")
+const { Provider } = require("react-redux")
+const { PersistGate } = require("redux-persist/integration/react")
 
-exports.replaceRouterComponent = ({ history }) => {
-  const store = createStore()
+const { store, persistor } = require("./src/state/store/index")
 
-  const ConnectedRouterWrapper = ({ children }) => (
+exports.wrapRootElement = ({ element }) => {
+  return (
     <Provider store={store}>
-      <Router history={history}>{children}</Router>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>{element}</BrowserRouter>
+      </PersistGate>
     </Provider>
   )
-
-  return ConnectedRouterWrapper
 }

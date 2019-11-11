@@ -1,6 +1,7 @@
-import React from "react";
-import Link from "gatsby-link";
-import { logo } from "../assets";
+import React from "react"
+import PropTypes from "prop-types"
+import Link from "gatsby-link"
+import "../assets/icons/style.css"
 
 const WineLink = ({ to, icon, location }) => (
   <li className={location.pathname.startsWith(to) ? "active" : ""}>
@@ -11,9 +12,15 @@ const WineLink = ({ to, icon, location }) => (
       </span>
     </Link>
   </li>
-);
+)
 
-export default ({ location }) => (
+WineLink.propTypes = {
+  to: PropTypes.string,
+  icon: PropTypes.string,
+  location: PropTypes.object,
+}
+
+const WineNavigation = ({ location }) => (
   <div>
     <nav className="wine-navigation">
       <ul>
@@ -24,4 +31,10 @@ export default ({ location }) => (
       </ul>
     </nav>
   </div>
-);
+)
+
+WineNavigation.propTypes = {
+  location: PropTypes.object,
+}
+
+export default WineNavigation

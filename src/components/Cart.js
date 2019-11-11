@@ -1,15 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React from "react"
+import PropTypes from "prop-types"
+import { useSelector, useDispatch } from "react-redux"
+import { add, remove, clear } from "../state/actions/index"
+import crypto from "crypto"
 
-const CartItem = ({ item, add, remove }) => (
+// Set Up Dispatch for Both CartItem and Cart Components
+const dispatch = useDispatch()
+
+const CartItem = ({ item }) => (
   <div className="itemRow">
     <div className="item-decrement">
-      <a onClick={() => remove(item, 1)}> - </a>
+      <a onClick={() => dispatch(remove(1, item))}> - </a>
     </div>
     <div className="item-quantity">{item.quantity}</div>
     <div className="item-increment">
-      <a onClick={() => add(item, 1)}>+</a>
+      <a onClick={() => dispatch(add(1, item))}>+</a>
     </div>
     <div className="item-systemname">
       {item.content}l {item.name}
@@ -17,124 +22,85 @@ const CartItem = ({ item, add, remove }) => (
     <div className="item-price">€{parseFloat(item.price).toFixed(2)}</div>
     <div className="item-total">€{item.total.toFixed(2)}</div>
     <div className="item-remove">
-      <a className="cart-anchor" onClick={() => remove(item, item.quantity)}>
+      <a
+        className="cart-anchor"
+        onClick={() => dispatch(remove(item.quantity, item))}
+      >
         X
       </a>
     </div>
   </div>
-);
+)
 
-const cartStyles = () => {
-  this.refs.c
-} 
+CartItem.propTypes = {
+  item: PropTypes.object,
+}
 
-const Cart = ({
-  checkout,
-  count,
-  shipping,
-  total,
-  grandTotal,
-  items,
-  add,
-  remove,
-  clear
-}) =>
-  count > 0 && (
-    <div
-      className={"cart" + (checkout ? " checkout" : "")}
-      role="button"
-      ref={c => {
-        if (c) {
-          c.setAttribute("class", "cart" + (checkout ? " checkout" : ""));
-          c.setAttribute("role", "button");
-          c.addEventListener("click", () =>  {
-            return true;
-          });
-        }
-      }}
-    >
-      <div
-        className="summary" 
-        ref={s => {
-          if(s) {
-            s.setAttribute("class", "summary");
-          }
-        }}
-      >
+const Cart = () => {
+  const count = useSelector(state => state.cart.count)
+  const checkout = useSelector(state => state.cart.checkout)
+  const shipping = useSelector(state => state.cart.shipping)
+  const total = useSelector(state => state.cart.total)
+  const grandTotal = useSelector(state => state.cart.grandTotal)
+  const items = useSelector(state => state.cart.items)
+
+  const renderCart = () => {
+    if (count > 0) {
+      return (
         <div
-          className="quantity simpleCart_quantity"
-          ref={q => {
-            if(q) {
-              q.setAttribute("class", "quantity simpleCart_quantity");
-            }
-          }}
-          >{count}</div>
-        <span className="icon-i_basket" />
-        <div
-          className="grand-total simpleCart_grandTotal"
-          ref={g => {
-            if(g) {
-              g.setAttribute("class", "grand-total simpleCart_grandTotal");
+          className={"cart" + (checkout ? " checkout" : "")}
+          role="button"
+          ref={c => {
+            if (c) {
+              c.addEventListener("click", () => {
+                return true
+              })
             }
           }}
         >
-          €{grandTotal.toFixed(2)}
-        </div>
-      </div>
+          <div className="summary">
+            <div className="quantity simpleCart_quantity">{count}</div>
+            <span className="icon-i_basket" />
+            <div className="grand-total simpleCart_grandTotal">
+              €{grandTotal.toFixed(2)}
+            </div>
+          </div>
 
-      <div className="details">
-        <a className="empty-cart simpleCart_empty cart-anchor" onClick={clear}>
-          X Korb leeren
-        </a>
-
-        <div className="cart-items">
-          <div className="simpleCart_items">
-            <div>
-              {items.map((item, index) => (
-                <CartItem item={item} key={index} add={add} remove={remove} />
-              ))}
+          <div className="details">
+            <a
+              className="empty-cart simpleCart_empty cart-anchor"
+              onClick={dispatch(clear)}
+            >
+              X Korb leeren
+            </a>
+            <div className="cart-items">
+              <div className="simpleCart_items">
+                <div>
+                  {items.map(item => (
+                    <CartItem
+                      item={item}
+                      key={crypto.randomBytes(6).toString("hex")}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="simpleCart_total">€{total.toFixed(2)}</div>
+            <div className="simpleCart_quantity">{count}</div>
+            <div className="simpleCart_shipping">€{shipping.toFixed(2)}</div>
+            <div className="simpleCart_grandTotal">
+              €{grandTotal.toFixed(2)}
+            </div>
+            <div className="checkout-button">
+              <a href="../checkout">&gt; Bestellen</a>
             </div>
           </div>
         </div>
+      )
+    }
+  }
 
-        <div className="simpleCart_total">€{total.toFixed(2)}</div>
+  return <>{renderCart()}</>
+}
 
-        <div className="simpleCart_quantity">{count}</div>
-
-        <div className="simpleCart_shipping">€{shipping.toFixed(2)}</div>
-
-        <div className="simpleCart_grandTotal">€{grandTotal.toFixed(2)}</div>
-
-        <div className="checkout-button">
-          <a href="../checkout">> Bestellen</a>
-        </div>
-      </div>
-    </div>
-  );
-
-Cart.propTypes = {
-  count: PropTypes.number.isRequired,
-  shipping: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  grandTotal: PropTypes.number.isRequired,
-  items: PropTypes.array.isRequired,
-  add: PropTypes.func.isRequired,
-  clear: PropTypes.func.isRequired,
-  remove: PropTypes.func.isRequired
-};
-
-const mapStateToProps = ({ count, items, shipping, total, grandTotal }) => {
-  return { count, items, shipping, total, grandTotal };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    add: (item, quantity = 1) =>
-      dispatch({ type: "ADD", payload: { item, quantity } }),
-    remove: (item, quantity = 1) =>
-      dispatch({ type: "REMOVE", payload: { item, quantity } }),
-    clear: () => dispatch({ type: "CLEAR" })
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default Cart

@@ -1,28 +1,39 @@
-const uuid = require('uuid');
-const crypto = require('crypto');
-const fetch = require('node-fetch');
+const axios = require("axios")
 
-exports.sourceNodes = async ({ boundActionCreators }) => {
-  const { createNode } = boundActionCreators
-  const data = await fetch(
-    `https://schneckenhof-lb4-live.herokuapp.com/settings`
-  ).then(res => res.json());
-  const type = 'settings';
-  
-  data.map(item => {
-    item.id = item.id + 'settings';
-    item.showOnHome = item.showOnHome ? item.showOnHome : false;
-    item.homePageDescription = item.homePageDescription ? item.homePageDescription : item.shortDescription
-    const contentDigest = crypto.createHash(`md5`).update(JSON.stringify(item)).digest(`hex`);
-    const nodeBase = {
-      parent: null,
-      children: [],
-      internal: {
-        contentDigest,
-        type,
-      },
-    };
-    createNode(Object.assign({}, nodeBase, item))
-  });
-  return
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) => {
+  try {
+    const { createNode } = actions
+    const data = await axios({
+      method: "get",
+      url: "https://schneckenhof-lb4-live.herokuapp.com/settings",
+    }).then(res => {
+      return res.data
+    })
+    await data.forEach(item => {
+      item.showOnHome = item.showOnHome ? item.showOnHome : false
+      item.homePageDescription = item.homePageDescription
+        ? item.homePageDescription
+        : item.shortDescription
+      const nodeMeta = {
+        id: createNodeId(`settings-${item.id}`),
+        parent: null,
+        children: [],
+        internal: {
+          type: "Settings",
+          mediaType: `application/json`,
+          content: JSON.stringify(item),
+          contentDigest: createContentDigest(item),
+        },
+      }
+      const node = Object.assign({}, item, nodeMeta)
+      createNode(node)
+      return
+    })
+  } catch (err) {
+    console.log(err)
+  }
 }

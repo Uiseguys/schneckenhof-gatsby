@@ -1,19 +1,23 @@
-import React from "react";
+import React from "react"
+import Layout from "../components/layout"
 
-import SubpageHeader from "../components/SubpageHeader";
+import SubpageHeader from "../components/SubpageHeader"
 
-export default () => (
-  <div className="content-container" id="unsubscribe-body">
-    <SubpageHeader />
-
-    <h2>Email abgemeldet</h2>
-    <div className="subpage-content">
-      <div className="text">
-        <p>
-          <span>😔</span>
-          Sie können sich jederzeit wieder registrieren.
-        </p>
+const Unsubscribe = () => (
+  <Layout>
+    <div className="content-container" id="unsubscribe-body">
+      <SubpageHeader />
+      <h2>Email abgemeldet</h2>
+      <div className="subpage-content">
+        <div className="text">
+          <p>
+            <span>😔</span>
+            Sie können sich jederzeit wieder registrieren.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-);
+  </Layout>
+)
+
+export default Unsubscribe
