@@ -25,13 +25,13 @@ const cart = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
       items = state.items.filter(i => {
-        i.id == item.id
+        i.wineId == item.wineId
       })
       newItem = items[0] || item
       newItem.quantity = newItem.quantity || 0
       newItem.quantity += quantity
       newItem.total = item.price * newItem.quantity
-      filteredItems = state.items.filter(i => i.id != item.id)
+      filteredItems = state.items.filter(i => i.wineId != item.wineId)
       items = [newItem, ...filteredItems]
       count = countFunc(items)
       shipping = shippingFunc(count)
