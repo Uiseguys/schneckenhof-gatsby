@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import accounting from "accounting"
 import AddToCart from "./AddToCart"
-import AwwardBadge from "./AwardBadge"
+import AwardBadge from "./AwardBadge"
 
 const priceInt = price => Math.floor(price)
 const priceDecimals = price => Math.round((price - priceInt(price)) * 100)
@@ -38,7 +38,7 @@ const Wine = ({ wine }) => (
       </a>
     </div>
 
-    <AwwardBadge awardText={wine.awardText} awardLevel={wine.awardLevel} />
+    <AwardBadge awardText={wine.awardText} awardLevel={wine.awardLevel} />
 
     <div className="description">
       <div>

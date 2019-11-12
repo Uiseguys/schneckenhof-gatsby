@@ -1,8 +1,9 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import Wine from "./Wine"
 
-export default ({ wines }) => (
+const Wines = ({ wines }) => (
   <div className="wine-list">
     {wines
       .sort(function(a, b) {
@@ -13,3 +14,9 @@ export default ({ wines }) => (
       ))}
   </div>
 )
+
+Wines.propTypes = {
+  wines: PropTypes.array,
+}
+
+export default Wines

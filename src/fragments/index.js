@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 export const WineFragment = graphql`
   fragment WineFragment on Wines {
     type
-    id
+    wineId
     name
     premium
     image

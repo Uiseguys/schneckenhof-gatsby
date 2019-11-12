@@ -1,5 +1,6 @@
-import React from "react";
-import { css } from "glamor";
+import React from "react"
+import PropTypes from "prop-types"
+import { css } from "glamor"
 
 let box = css({
   cursor: "pointer",
@@ -20,10 +21,10 @@ let box = css({
     boxShadow: "2px 2px 4px -1px #888",
     color: "white",
     padding: "4px",
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
   },
-  ":hover .text": { display: "block" }
-});
+  ":hover .text": { display: "block" },
+})
 
 const AwardBadge = ({ awardText, awardLevel }) => (
   <div {...box}>
@@ -39,5 +40,11 @@ const AwardBadge = ({ awardText, awardLevel }) => (
     {awardLevel && <div className="ribbon-shadow" />}
     {awardLevel && <div className={`coin ` + awardLevel} />}
   </div>
-);
-export default AwardBadge;
+)
+
+AwardBadge.propTypes = {
+  awardLevel: PropTypes.string,
+  awardText: PropTypes.string,
+}
+
+export default AwardBadge

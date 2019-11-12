@@ -25,8 +25,9 @@ const AddToCart = ({ item }) => {
       <div className="button">
         <a
           className="item_add"
-          href="javascript:void(0);"
-          onClick={() => dispatch(add(quantity, item))}
+          onClick={() => {
+            dispatch(add(quantity, item))
+          }}
         >
           <span className="icon-i_basket" />
         </a>

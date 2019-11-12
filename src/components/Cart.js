@@ -40,25 +40,19 @@ CartItem.propTypes = {
 const Cart = () => {
   const dispatch = useDispatch()
   const count = useSelector(state => state.cart.count)
-  const checkout = useSelector(state => state.cart.checkout)
   const shipping = useSelector(state => state.cart.shipping)
   const total = useSelector(state => state.cart.total)
   const grandTotal = useSelector(state => state.cart.grandTotal)
   const items = useSelector(state => state.cart.items)
 
   const renderCart = () => {
-    if (count > 0 && location.pathname != "/checkout") {
+    if (count > 0) {
       return (
         <aside
-          className={"cart" + (checkout ? " checkout" : "")}
+          className={
+            location.pathname == "/checkout/" ? "cart checkout" : "cart"
+          }
           role="button"
-          ref={c => {
-            if (c) {
-              c.addEventListener("click", () => {
-                return true
-              })
-            }
-          }}
         >
           <div className="summary">
             <div className="quantity simpleCart_quantity">{count}</div>
@@ -71,7 +65,7 @@ const Cart = () => {
           <div className="details">
             <a
               className="empty-cart simpleCart_empty cart-anchor"
-              onClick={dispatch(clear)}
+              onClick={() => dispatch(clear)}
             >
               X Korb leeren
             </a>

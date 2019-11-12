@@ -18,6 +18,7 @@ exports.sourceNodes = async ({
       item.homePageDescription = item.homePageDescription
         ? item.homePageDescription
         : item.shortDescription
+      item.wineId = item.id
       const nodeMeta = {
         id: createNodeId(`wines-${item.id}`),
         parent: null,

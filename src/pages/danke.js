@@ -1,14 +1,18 @@
-import React from "react";
+import React from "react"
+import Footer from "../components/Footer"
 
 export default () => (
-  <div className="content-container">
-    <div className="checkout">
-      <h4>Vielen Dank für Ihre Bestellung!</h4>
+  <>
+    <div className="content-container">
+      <div className="checkout">
+        <h4>Vielen Dank für Ihre Bestellung!</h4>
 
-      <br />
-      <br />
-      <a href="/"> &lt; Zurück zur Startseite </a>
-      <br />
+        <br />
+        <br />
+        <a href="/"> &lt; Zurück zur Startseite </a>
+        <br />
+      </div>
     </div>
-  </div>
-);
+    <Footer />
+  </>
+)

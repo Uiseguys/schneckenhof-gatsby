@@ -24,7 +24,9 @@ const cart = (state = initialState, action) => {
   let count, items, shipping, total, grandTotal
   switch (action.type) {
     case ADD:
-      items = state.items.filter(i => i.id == item.id)
+      items = state.items.filter(i => {
+        i.id == item.id
+      })
       newItem = items[0] || item
       newItem.quantity = newItem.quantity || 0
       newItem.quantity += quantity
