@@ -1,9 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Link from "gatsby-link"
-import { Trans, withI18n } from "@lingui/react"
+import { withI18n } from "@lingui/react"
 import logo from "../assets/images/logo.svg"
-import badge from "../assets/images/badge.svg"
 import family from "../assets/images/family.jpg"
 import grapes from "../assets/images/grapes.jpg"
 import wines from "../assets/images/wines.jpg"
@@ -11,8 +9,7 @@ import party1 from "../assets/images/party1.jpg"
 import restaurant from "../assets/images/restaurant.jpg"
 
 import config from "./index.json"
-import News from "../components/News"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 const Teaser = props => (
   <div className="teaser">
@@ -54,7 +51,6 @@ const IndexPage = ({ i18n }) => {
           <div className="branding">
             <img src={logo} />
           </div>
-
           <div>
             <div className="info">
               {/* <div className="info" onClick="openNews()"> */}

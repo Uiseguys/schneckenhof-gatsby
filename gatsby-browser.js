@@ -9,18 +9,16 @@
 //require("core-js")
 
 const React = require("react")
-const { BrowserRouter } = require("react-router-dom")
+const { createBrowserHistory } = require("history")
+const { Router } = require("react-router-dom")
 const { Provider } = require("react-redux")
 const { PersistGate } = require("redux-persist/integration/react")
-
 const { store, persistor } = require("./src/state/store/index")
 
-exports.wrapRootElement = ({ element }) => {
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>{element}</BrowserRouter>
-      </PersistGate>
-    </Provider>
-  )
-}
+exports.wrapRootElement = ({ element }) => (
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <Router history={createBrowserHistory({})}>{element}</Router>
+    </PersistGate>
+  </Provider>
+)

@@ -6,7 +6,6 @@ const Agb = () => (
   <Layout>
     <div className="content-container">
       <SubpageHeader />
-
       <h2>AGB</h2>
       <div className="subpage-content meta-info">
         <div className="text">

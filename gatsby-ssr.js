@@ -6,13 +6,12 @@
 
 // You can delete this file if you're not using it
 
-//const React = require("react")
-//const { Provider } = require("react-redux")
-//const { renderToString } = require("react-dom/server")
+const React = require("react")
+const { Provider } = require("react-redux")
+const { renderToString } = require("react-dom/server")
+const { store } = require("./src/state/store/index")
 
-//const store = require("./src/state/store/index")
-
-//exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
-//const ConnectedBody = () => <Provider store={store}>{bodyComponent}</Provider>
-//replaceBodyHTMLString(renderToString(<ConnectedBody />))
-//}
+exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
+  const ConnectedBody = () => <Provider store={store}>{bodyComponent}</Provider>
+  replaceBodyHTMLString(renderToString(<ConnectedBody />))
+}

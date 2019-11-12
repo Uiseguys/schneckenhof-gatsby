@@ -4,39 +4,41 @@ import { useSelector, useDispatch } from "react-redux"
 import { add, remove, clear } from "../state/actions/index"
 import crypto from "crypto"
 
-// Set Up Dispatch for Both CartItem and Cart Components
-const dispatch = useDispatch()
+const CartItem = ({ item }) => {
+  const dispatch = useDispatch()
 
-const CartItem = ({ item }) => (
-  <div className="itemRow">
-    <div className="item-decrement">
-      <a onClick={() => dispatch(remove(1, item))}> - </a>
+  return (
+    <div className="itemRow">
+      <div className="item-decrement">
+        <a onClick={() => dispatch(remove(1, item))}> - </a>
+      </div>
+      <div className="item-quantity">{item.quantity}</div>
+      <div className="item-increment">
+        <a onClick={() => dispatch(add(1, item))}>+</a>
+      </div>
+      <div className="item-systemname">
+        {item.content}l {item.name}
+      </div>
+      <div className="item-price">€{parseFloat(item.price).toFixed(2)}</div>
+      <div className="item-total">€{item.total.toFixed(2)}</div>
+      <div className="item-remove">
+        <a
+          className="cart-anchor"
+          onClick={() => dispatch(remove(item.quantity, item))}
+        >
+          X
+        </a>
+      </div>
     </div>
-    <div className="item-quantity">{item.quantity}</div>
-    <div className="item-increment">
-      <a onClick={() => dispatch(add(1, item))}>+</a>
-    </div>
-    <div className="item-systemname">
-      {item.content}l {item.name}
-    </div>
-    <div className="item-price">€{parseFloat(item.price).toFixed(2)}</div>
-    <div className="item-total">€{item.total.toFixed(2)}</div>
-    <div className="item-remove">
-      <a
-        className="cart-anchor"
-        onClick={() => dispatch(remove(item.quantity, item))}
-      >
-        X
-      </a>
-    </div>
-  </div>
-)
+  )
+}
 
 CartItem.propTypes = {
   item: PropTypes.object,
 }
 
 const Cart = () => {
+  const dispatch = useDispatch()
   const count = useSelector(state => state.cart.count)
   const checkout = useSelector(state => state.cart.checkout)
   const shipping = useSelector(state => state.cart.shipping)
@@ -45,9 +47,9 @@ const Cart = () => {
   const items = useSelector(state => state.cart.items)
 
   const renderCart = () => {
-    if (count > 0) {
+    if (count > 0 && location.pathname != "/checkout") {
       return (
-        <div
+        <aside
           className={"cart" + (checkout ? " checkout" : "")}
           role="button"
           ref={c => {
@@ -95,12 +97,16 @@ const Cart = () => {
               <a href="../checkout">&gt; Bestellen</a>
             </div>
           </div>
-        </div>
+        </aside>
       )
     }
   }
 
   return <>{renderCart()}</>
+}
+
+Cart.propTypes = {
+  pageContext: PropTypes.object,
 }
 
 export default Cart
