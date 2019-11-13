@@ -65,7 +65,7 @@ const Cart = () => {
           <div className="details">
             <a
               className="empty-cart simpleCart_empty cart-anchor"
-              onClick={() => dispatch(clear)}
+              onClick={() => dispatch(clear())}
             >
               X Korb leeren
             </a>
