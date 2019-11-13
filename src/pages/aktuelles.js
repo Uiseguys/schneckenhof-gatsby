@@ -1,9 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import SubpageHeader from "../components/SubpageHeader"
+import SubpageHeader from "../components/subpageheader"
 import Layout from "../components/layout"
-import { restaurant1, restaurant2, restaurant3 } from "../assets"
 
 import News from "../components/News"
 

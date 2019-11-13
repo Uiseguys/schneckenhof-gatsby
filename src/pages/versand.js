@@ -1,8 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-
-import SubpageHeader from "../components/SubpageHeader"
-import { restaurant1, restaurant2, restaurant3 } from "../assets"
+import SubpageHeader from "../components/subpageheader"
 
 const Versand = () => (
   <Layout>

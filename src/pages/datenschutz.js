@@ -1,5 +1,5 @@
 import React from "react"
-import SubpageHeader from "../components/SubpageHeader"
+import SubpageHeader from "../components/subpageheader"
 import Layout from "../components/layout"
 
 const Datenschutz = () => (

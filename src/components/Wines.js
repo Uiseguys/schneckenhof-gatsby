@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Wine from "./Wine"
+import Wine from "./wine"
 
 const Wines = ({ wines }) => (
   <div className="wine-list">

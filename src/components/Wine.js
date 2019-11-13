@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import accounting from "accounting"
-import AddToCart from "./AddToCart"
-import AwardBadge from "./AwardBadge"
+import AddToCart from "./addtocart"
+import AwardBadge from "./awardbadge"
 
 const priceInt = price => Math.floor(price)
 const priceDecimals = price => Math.round((price - priceInt(price)) * 100)

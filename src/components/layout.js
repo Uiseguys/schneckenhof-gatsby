@@ -5,14 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { Fragment } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+//import { useStaticQuery, graphql } from "gatsby"
 
-import Cart from "./Cart"
-import Navigation from "../components/Navigation"
-import Footer from "./Footer"
-//import "./layout.css"
+import Cart from "./cart"
+import Navigation from "./navigation"
+import Footer from "./footer"
 import "../scss/style.scss"
 
 const Layout = ({ children }) => {

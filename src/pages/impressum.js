@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SubpageHeader from "../components/SubpageHeader"
+import SubpageHeader from "../components/subpageheader"
 
 const Impressum = () => (
   <Layout>

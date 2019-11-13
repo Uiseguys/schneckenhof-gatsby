@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { withI18n } from "@lingui/react"
 import logo from "../assets/images/logo.svg"
@@ -21,6 +22,10 @@ const Teaser = props => (
     <p>{props.data.text} </p>
   </div>
 )
+
+Teaser.propTypes = {
+  props: PropTypes.object,
+}
 
 const IndexPage = ({ i18n }) => {
   const data = useStaticQuery(graphql`

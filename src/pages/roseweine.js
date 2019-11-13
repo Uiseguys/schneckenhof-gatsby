@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import SubpageHeader from "../components/SubpageHeader"
-import WineNavigation from "../components/WineNavigation"
-import Wines from "../components/Wines"
+import SubpageHeader from "../components/subpageheader"
+import WineNavigation from "../components/winenavigation"
+import Wines from "../components/wines"
 import { WineFragment } from "../fragments"
 
 const Roseweine = ({ location }) => {

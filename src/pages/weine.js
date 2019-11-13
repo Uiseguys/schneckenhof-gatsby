@@ -1,10 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
-
 import vinyard1 from "../assets/images/vinyard1.jpg"
 import vinyard2 from "../assets/images/vinyard2.jpg"
 import vinyard3 from "../assets/images/vinyard3.jpg"
-import SubpageHeader from "../components/SubpageHeader"
+import SubpageHeader from "../components/subpageheader"
 
 const Weine = () => (
   <Layout>

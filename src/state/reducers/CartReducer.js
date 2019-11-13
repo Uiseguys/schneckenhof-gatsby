@@ -9,7 +9,7 @@ const initialState = {
   items: [],
 }
 
-// Items
+// Functions to be used in the Reducer
 const sum = (accumulator, value) => accumulator + value
 const countFunc = (items = []) =>
   items.map(item => item.quantity).reduce(sum, 0)
