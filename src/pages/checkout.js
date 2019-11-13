@@ -69,11 +69,11 @@ const Checkout = () => {
       },
     })
       .then(() => {
-        dispatch(clear)
+        dispatch(clear())
         navigateTo("/danke")
       })
       .catch(() => {
-        dispatch(clear)
+        dispatch(clear())
         navigateTo("/fehler")
       })
   }
