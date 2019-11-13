@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import SubpageHeader from "../components/subpageheader"
 import Layout from "../components/layout"
 
-import News from "../components/News"
+import News from "../components/news"
 
 const Aktuelles = () => {
   const data = useStaticQuery(graphql`

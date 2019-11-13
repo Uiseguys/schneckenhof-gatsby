@@ -6,6 +6,8 @@ import SubpageHeader from "../components/subpageheader"
 import Cart from "../components/cart"
 import Footer from "../components/footer"
 import axios from "axios"
+import "../assets/icons/style.css"
+import "../scss/style.scss"
 
 const CHECKOUT_URL = "http://localhost:3000/payment/checkout"
 //"https://schneckenhof-lb4-live.herokuapp.com/payment/checkout"

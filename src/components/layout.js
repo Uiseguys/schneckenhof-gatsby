@@ -12,8 +12,8 @@ import PropTypes from "prop-types"
 import Cart from "./cart"
 import Navigation from "./navigation"
 import Footer from "./footer"
-import "../scss/style.scss"
 import "../assets/icons/style.css"
+import "../scss/style.scss"
 
 const Layout = ({ children }) => {
   //const data = useStaticQuery(graphql`

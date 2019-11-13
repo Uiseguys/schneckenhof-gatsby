@@ -1,5 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
+import "../assets/icons/style.css"
+import "../scss/style.scss"
 
 import SubpageHeader from "../components/subpageheader"
 

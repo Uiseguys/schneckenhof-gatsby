@@ -1,5 +1,7 @@
 import React from "react"
 import Footer from "../components/footer"
+import "../assets/icons/style.css"
+import "../scss/style.scss"
 
 const Fehler = () => (
   <>
