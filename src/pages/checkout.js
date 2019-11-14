@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { clear } from "../state/actions/index"
-import { navigateTo } from "gatsby-link"
+import { navigate } from "gatsby"
 import SubpageHeader from "../components/subpageheader"
 import Cart from "../components/cart"
 import Footer from "../components/footer"
@@ -31,6 +31,12 @@ const Checkout = () => {
 
   // Access React Redux State Items
   const cartState = useSelector(state => state.cart)
+
+  useEffect(() => {
+    if (!(cartState.items.length > 0)) {
+      navigate("/rotweine")
+    }
+  })
 
   const reset = () => {
     setState({
@@ -72,22 +78,16 @@ const Checkout = () => {
     })
       .then(() => {
         dispatch(clear())
-        navigateTo("/danke")
+        navigate("/danke")
       })
       .catch(() => {
         dispatch(clear())
-        navigateTo("/fehler")
+        navigate("/fehler")
       })
   }
 
-  const checkForItems = () => {
-    if (!(cartState.items.length > 0)) {
-      navigateTo("/rotweine")
-    }
-  }
   return (
     <>
-      {checkForItems()}
       <div className="content-container">
         <div className="checkout">
           <SubpageHeader />
