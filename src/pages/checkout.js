@@ -80,8 +80,14 @@ const Checkout = () => {
       })
   }
 
+  const checkForItems = () => {
+    if (!(cartState.items.length > 0)) {
+      navigateTo("/rotweine")
+    }
+  }
   return (
     <>
+      {checkForItems()}
       <div className="content-container">
         <div className="checkout">
           <SubpageHeader />
