@@ -1,9 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
-import SubpageHeader from "../components/subpageheader"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
-
+import SubpageHeader from "../components/subpageheader"
 import News from "../components/news"
 
 const Aktuelles = () => {
@@ -38,13 +37,16 @@ const Aktuelles = () => {
   `)
 
   return (
-    <Layout>
-      <div className="content-container">
-        <SubpageHeader />
-        <h2>Aktuelles</h2>
-        <News data={data}></News>
-      </div>
-    </Layout>
+    <>
+      <SEO title="Aktuelles" />
+      <Layout>
+        <div className="content-container">
+          <SubpageHeader />
+          <h2>Aktuelles</h2>
+          <News data={data}></News>
+        </div>
+      </Layout>
+    </>
   )
 }
 

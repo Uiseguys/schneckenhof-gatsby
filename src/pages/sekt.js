@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import SubpageHeader from "../components/subpageheader"
 import WineNavigation from "../components/winenavigation"
@@ -21,23 +22,26 @@ const Sekt = ({ location }) => {
   `)
 
   return (
-    <Layout>
-      <div className="content-container">
-        <SubpageHeader />
+    <>
+      <SEO title={"Sekt"} />
+      <Layout>
+        <div className="content-container">
+          <SubpageHeader />
 
-        <WineNavigation location={location} />
+          <WineNavigation location={location} />
 
-        <h2>Sekt</h2>
+          <h2>Sekt</h2>
 
-        {
-          //<h3>
-          //Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
-          //möglich sein.
-          //</h3>
-        }
-        {<Wines wines={data.allWines.edges.map(edge => edge.node)} />}
-      </div>
-    </Layout>
+          {
+            //<h3>
+            //Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
+            //möglich sein.
+            //</h3>
+          }
+          {<Wines wines={data.allWines.edges.map(edge => edge.node)} />}
+        </div>
+      </Layout>
+    </>
   )
 }
 

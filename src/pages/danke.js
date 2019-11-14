@@ -1,10 +1,12 @@
 import React from "react"
+import SEO from "../components/seo"
 import Footer from "../components/footer"
 import "../assets/icons/style.css"
 import "../scss/style.scss"
 
 export default () => (
   <>
+    <SEO title={"Danke"} />
     <div className="content-container">
       <div className="checkout">
         <h4>Vielen Dank für Ihre Bestellung!</h4>

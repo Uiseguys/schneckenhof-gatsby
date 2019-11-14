@@ -1,9 +1,11 @@
 import React from "react"
-import SubpageHeader from "../components/subpageheader"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
+import SubpageHeader from "../components/subpageheader"
 
 const Datenschutz = () => (
   <>
+    <SEO title={"Datenschutz"} />
     <Layout>
       <div className="content-container">
         <SubpageHeader />

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Schneckenhof Weingut`,
     description: `A site about wine`,
-    author: `The Weingut Family`,
+    author: `Cris Shaki`,
   },
   plugins: [
     `gatsby-source-wines`,

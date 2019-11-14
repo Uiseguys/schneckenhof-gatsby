@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { clear } from "../state/actions/index"
 import { navigate } from "gatsby"
+import SEO from "../components/seo"
 import SubpageHeader from "../components/subpageheader"
 import Cart from "../components/cart"
 import Footer from "../components/footer"
@@ -88,6 +89,7 @@ const Checkout = () => {
 
   return (
     <>
+      <SEO title={"Checkout"} />
       <div className="content-container">
         <div className="checkout">
           <SubpageHeader />

@@ -5,9 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-//require("regenerator-runtime")
-//require("core-js")
-
 const React = require("react")
 const { createBrowserHistory } = require("history")
 const { Router } = require("react-router-dom")

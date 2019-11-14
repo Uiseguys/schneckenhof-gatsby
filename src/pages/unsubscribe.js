@@ -1,4 +1,5 @@
 import React from "react"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import "../assets/icons/style.css"
 import "../scss/style.scss"
@@ -6,20 +7,23 @@ import "../scss/style.scss"
 import SubpageHeader from "../components/subpageheader"
 
 const Unsubscribe = () => (
-  <Layout>
-    <div className="content-container" id="unsubscribe-body">
-      <SubpageHeader />
-      <h2>Email abgemeldet</h2>
-      <div className="subpage-content">
-        <div className="text">
-          <p>
-            <span>😔</span>
-            Sie können sich jederzeit wieder registrieren.
-          </p>
+  <>
+    <SEO title={"Unsubscribe"} />
+    <Layout>
+      <div className="content-container" id="unsubscribe-body">
+        <SubpageHeader />
+        <h2>Email abgemeldet</h2>
+        <div className="subpage-content">
+          <div className="text">
+            <p>
+              <span>😔</span>
+              Sie können sich jederzeit wieder registrieren.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
+  </>
 )
 
 export default Unsubscribe
