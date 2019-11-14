@@ -2,7 +2,7 @@
   "name": "schneckenhof-gatsby",
   "private": true,
   "description": "A site About Wine",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "author": "Cris Shaki",
   "dependencies": {
     "@lingui/react": "^2.8.3",
