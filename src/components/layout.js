@@ -15,27 +15,15 @@ import Footer from "./footer"
 import "../assets/icons/style.css"
 import "../scss/style.scss"
 
-const Layout = ({ children }) => {
-  //const data = useStaticQuery(graphql`
-  //query SiteTitleQuery {
-  //site {
-  //siteMetadata {
-  //title
-  //}
-  //}
-  //}
-  //`)
-
-  return (
-    <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <Cart />
-      <Navigation />
-      {children}
-      <Footer />
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+    {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+    <Cart />
+    <Navigation />
+    {children}
+    <Footer />
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

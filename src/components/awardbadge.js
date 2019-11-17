@@ -47,4 +47,4 @@ AwardBadge.propTypes = {
   awardText: PropTypes.string,
 }
 
-export default AwardBadge
+export default React.memo(AwardBadge)

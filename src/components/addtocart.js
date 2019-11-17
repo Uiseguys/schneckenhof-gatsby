@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 import PropTypes from "prop-types"
 import { useDispatch } from "react-redux"
 import { add } from "../state/actions/index"
@@ -7,9 +7,9 @@ const AddToCart = ({ item }) => {
   const dispatch = useDispatch()
   const [quantity, setQuantity] = useState(1)
 
-  const handleQuantityInput = e => {
+  const handleQuantityInput = useCallback(e => {
     setQuantity(parseInt(e.target.value))
-  }
+  })
 
   return (
     <div className="shop-link">

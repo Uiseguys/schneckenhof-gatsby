@@ -40,4 +40,4 @@ const Navigation = () => (
     </ul>
   </nav>
 )
-export default Navigation
+export default React.memo(Navigation)

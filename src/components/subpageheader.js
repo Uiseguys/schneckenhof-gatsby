@@ -11,4 +11,4 @@ const SubpageHeader = () => (
   </header>
 )
 
-export default SubpageHeader
+export default React.memo(SubpageHeader)

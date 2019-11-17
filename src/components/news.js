@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import PropTypes from "prop-types"
 
 const createMarkup = html => {
@@ -6,7 +6,7 @@ const createMarkup = html => {
 }
 
 const News = ({ data }) => {
-  const renderNews = () => {
+  const renderNews = useCallback(() => {
     if (data.allNews.edges.length > 0) {
       const news = data.allNews.edges.sort((a, b) => {
         if (new Date(a.node.startDate) < new Date(b.node.startDate)) return -1
@@ -141,7 +141,7 @@ const News = ({ data }) => {
         </div>
       )
     }
-  }
+  })
 
   // console.log(this.props.news)
   return <>{renderNews()}</>

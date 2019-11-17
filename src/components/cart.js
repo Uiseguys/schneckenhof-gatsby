@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import PropTypes from "prop-types"
 import { useSelector, useDispatch } from "react-redux"
 import { add, remove, clear } from "../state/actions/index"
@@ -39,14 +39,18 @@ CartItem.propTypes = {
 
 const Cart = () => {
   const dispatch = useDispatch()
-  const count = useSelector(state => state.cart.count)
-  const shipping = useSelector(state => state.cart.shipping)
-  const total = useSelector(state => state.cart.total)
-  const grandTotal = useSelector(state => state.cart.grandTotal)
-  const items = useSelector(state => state.cart.items)
+  const cartState = useSelector(state => {
+    return {
+      count: state.cart.count,
+      shipping: state.cart.shipping,
+      total: state.cart.total,
+      grandTotal: state.cart.grandTotal,
+      items: state.cart.items,
+    }
+  })
 
-  const renderCart = () => {
-    if (count > 0) {
+  const renderCart = useCallback(() => {
+    if (cartState.count > 0) {
       return (
         <aside
           className={
@@ -55,10 +59,12 @@ const Cart = () => {
           role="button"
         >
           <div className="summary">
-            <div className="quantity simpleCart_quantity">{count}</div>
+            <div className="quantity simpleCart_quantity">
+              {cartState.count}
+            </div>
             <span className="icon-i_basket" />
             <div className="grand-total simpleCart_grandTotal">
-              €{grandTotal.toFixed(2)}
+              €{cartState.grandTotal.toFixed(2)}
             </div>
           </div>
 
@@ -72,7 +78,7 @@ const Cart = () => {
             <div className="cart-items">
               <div className="simpleCart_items">
                 <div>
-                  {items.map(item => (
+                  {cartState.items.map(item => (
                     <CartItem
                       item={item}
                       key={crypto.randomBytes(6).toString("hex")}
@@ -81,11 +87,15 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-            <div className="simpleCart_total">€{total.toFixed(2)}</div>
-            <div className="simpleCart_quantity">{count}</div>
-            <div className="simpleCart_shipping">€{shipping.toFixed(2)}</div>
+            <div className="simpleCart_total">
+              €{cartState.total.toFixed(2)}
+            </div>
+            <div className="simpleCart_quantity">{cartState.count}</div>
+            <div className="simpleCart_shipping">
+              €{cartState.shipping.toFixed(2)}
+            </div>
             <div className="simpleCart_grandTotal">
-              €{grandTotal.toFixed(2)}
+              €{cartState.grandTotal.toFixed(2)}
             </div>
             <div className="checkout-button">
               <a href="../checkout">&gt; Bestellen</a>
@@ -94,7 +104,7 @@ const Cart = () => {
         </aside>
       )
     }
-  }
+  })
 
   return <>{renderCart()}</>
 }

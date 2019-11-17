@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 import logo from "../assets/images/logo_visual.svg"
 import axios from "axios"
 
@@ -9,11 +9,12 @@ const Footer = () => {
     alertClasses: "alert alert-info",
     inputValue: "",
   })
-  const handleInputValue = value => {
-    setState({ ...state, inputValue: value })
-  }
 
-  const handleNewsletterSubmit = e => {
+  const handleInputValue = useCallback(value => {
+    setState({ ...state, inputValue: value })
+  })
+
+  const handleNewsletterSubmit = useCallback(e => {
     e.preventDefault()
     const bodyFormData = {
       email: state.inputValue,
@@ -52,7 +53,7 @@ const Footer = () => {
           setState({ ...state, alertOpacity: "0" })
         }, 5000)
       })
-  }
+  })
 
   return (
     <>
