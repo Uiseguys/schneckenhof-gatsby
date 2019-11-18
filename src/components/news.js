@@ -1,4 +1,4 @@
-import React, { useCallback } from "react"
+import React, { useCallback, memo } from "react"
 import PropTypes from "prop-types"
 
 const createMarkup = html => {
@@ -151,4 +151,4 @@ News.propTypes = {
   data: PropTypes.object,
 }
 
-export default News
+export default memo(News)

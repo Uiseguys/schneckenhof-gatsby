@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import PropTypes from "prop-types"
 import { css } from "glamor"
 
@@ -47,4 +47,4 @@ AwardBadge.propTypes = {
   awardText: PropTypes.string,
 }
 
-export default React.memo(AwardBadge)
+export default memo(AwardBadge)

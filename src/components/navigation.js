@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 
 const Navigation = () => (
   <nav className="main-navigation">
@@ -40,4 +40,4 @@ const Navigation = () => (
     </ul>
   </nav>
 )
-export default React.memo(Navigation)
+export default memo(Navigation)

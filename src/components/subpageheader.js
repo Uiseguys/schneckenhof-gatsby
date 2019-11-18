@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import { logo } from "../assets"
 
 const SubpageHeader = () => (
@@ -11,4 +11,4 @@ const SubpageHeader = () => (
   </header>
 )
 
-export default React.memo(SubpageHeader)
+export default memo(SubpageHeader)
