@@ -10,7 +10,7 @@ import axios from "axios"
 import "../assets/icons/style.css"
 import "../scss/style.scss"
 
-const CHECKOUT_URL = "http://localhost:3000/payment/checkout"
+const CHECKOUT_URL = "http://schneckenhof-lb4-live/payment/checkout"
 //"https://schneckenhof-lb4-live.herokuapp.com/payment/checkout"
 
 const Checkout = () => {
