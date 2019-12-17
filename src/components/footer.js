@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react"
 import logo from "../assets/images/logo_visual.svg"
+import vinissima from "../assets/images/vinissima.png"
 import axios from "axios"
 
 const Footer = () => {
@@ -66,7 +67,18 @@ const Footer = () => {
           {state.alertMessage}
         </div>
         <aside className="content-container text-light">
-          <h2>Newsletter</h2>
+
+          <div className="vinissima" style={{
+            float: "right",
+            width: "250px",
+            marginRight: "30px",
+            marginTop: "100px" }}>
+            <a href="https://www.vinissima-ev.de" target="_blank">
+              <img src={vinissima} />
+            </a>
+            </div>
+          <h2 style={{
+            marginTop: "80px" }}>Newsletter</h2>
           <form onSubmit={e => handleNewsletterSubmit(e)}>
             <div className="form-group row">
               <label htmlFor="email" id="newsletters-label">

@@ -67,3 +67,11 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+.idea/.name
+.idea/codeStyles/Project.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/encodings.xml
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/profiles_settings.xml
+.idea/misc.xml
+Schneckenhof Gatsby Frontend.iml
