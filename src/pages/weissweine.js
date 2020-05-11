@@ -30,14 +30,18 @@ const Weissweine = ({ location }) => {
           <SubpageHeader />
           <WineNavigation location={location} />
           <h2>Weißweine</h2>
-          <Wines wines={filterPremium(data, false)} />
           {
-            //<h3>
-            //Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
-            //möglich sein.
-            //</h3>
+            //<Wines wines={filterPremium(data, false)} />
           }
-          <h2>Premium Weißweine</h2>
+          {
+            <h3>
+            Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
+            möglich sein.
+            </h3>
+          }
+          {
+            //<h2>Premium Weißweine</h2>
+          }
           <Wines wines={filterPremium(data, true)} />
         </div>
       </Layout>

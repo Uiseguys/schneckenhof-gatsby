@@ -1,9 +1,9 @@
 {
   "name": "schneckenhof-gatsby",
   "private": true,
-  "description": "A site About Wine",
-  "version": "1.8.4",
-  "author": "Cris Shaki",
+  "description": "Schneckenhof ",
+  "version": "1.9.0",
+  "engines" : { "node" : ">=10.00" },
   "dependencies": {
     "@lingui/react": "^2.8.3",
     "accounting": "^0.4.1",

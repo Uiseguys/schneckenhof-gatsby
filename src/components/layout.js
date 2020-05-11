@@ -6,6 +6,8 @@
  */
 
 import React from "react"
+import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
 import PropTypes from "prop-types"
 //import { useStaticQuery, graphql } from "gatsby"
 
@@ -17,11 +19,16 @@ import "../scss/style.scss"
 
 const Layout = ({ children }) => (
   <>
+
     {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+    <Helmet>
+      <script src={withPrefix('script.js')} type="text/javascript" />
+    </Helmet>
     <Cart />
     <Navigation />
     {children}
     <Footer />
+
   </>
 )
 

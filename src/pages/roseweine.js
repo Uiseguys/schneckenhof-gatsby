@@ -33,13 +33,14 @@ const Roseweine = ({ location }) => {
           <h2>Roséweine</h2>
 
           {
-            //<h3>
-            //Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
-            //möglich sein.
-            //</h3>
+            <h3>
+            Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
+            möglich sein.
+            </h3>
           }
-
-          <Wines wines={data.allWines.edges.map(edge => edge.node)} />
+          {
+            //<Wines wines={data.allWines.edges.map(edge => edge.node)} />
+          }
         </div>
       </Layout>
     </>

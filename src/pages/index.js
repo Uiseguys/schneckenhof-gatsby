@@ -61,13 +61,16 @@ const IndexPage = ({ i18n }) => {
             </div>
             <div>
               <div className="info">
-                {/* <div className="info" onClick="openNews()"> */}
+
                 <a href="/aktuelles">
                   {data &&
                     data.allNews.edges.map((newsdata, index) => {
                       return (
                         newsdata.node.showOnHome && (
-                          <h4 key={index}>
+                          <h4 key={index}
+                              style={{ display: 'none' }}
+                              data-relevant-from={newsdata.node.relevantFrom}
+                              data-relevant-to={newsdata.node.relevantTo}>
                             {newsdata.node.title} <br />
                             {newsdata.node.homePageDescription}
                           </h4>
@@ -75,11 +78,7 @@ const IndexPage = ({ i18n }) => {
                       )
                     })}
                 </a>
-                {/* <h4>
-            Weihnachtsmarkt am ersten Adventswochenende. Adventszauber im
-            Schneckenhof<br />
-            Sa. 1.12. ab 15 Uhr & So. 2.12. ab 11 Uhr{" "}
-          </h4> */}
+
               </div>
             </div>
           </header>
