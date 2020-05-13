@@ -8,6 +8,7 @@ import WineNavigation from "../components/winenavigation"
 import Wines from "../components/wines"
 import { WineFragment } from "../fragments"
 import { filterPremium } from "../util"
+import maintenance from "../config";
 
 const Weissweine = ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -30,19 +31,25 @@ const Weissweine = ({ location }) => {
           <SubpageHeader />
           <WineNavigation location={location} />
           <h2>Weißweine</h2>
-          {
-            //<Wines wines={filterPremium(data, false)} />
-          }
-          {
+
+          {!maintenance && (
+            <Wines wines={filterPremium(data, false)} />
+          )}
+
+          {maintenance && (
             <h3>
-            Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
-            möglich sein.
+              Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
+              möglich sein.
             </h3>
-          }
-          {
-            //<h2>Premium Weißweine</h2>
-          }
-          <Wines wines={filterPremium(data, true)} />
+          )}
+
+          {!maintenance && (
+            <h2>Premium Weißweine</h2>
+          )}
+          {!maintenance && (
+            <Wines wines={filterPremium(data, true)} />
+          )}
+
         </div>
       </Layout>
     </>

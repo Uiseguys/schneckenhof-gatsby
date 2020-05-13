@@ -9,7 +9,8 @@ exports.sourceNodes = async ({
     const { createNode } = actions
     const data = await axios({
       method: "get",
-      url: "https://schneckenhof-lb4-live.herokuapp.com/settings",
+      // url: "https://schneckenhof-lb4-live.herokuapp.com/settings",
+      url: "http://www.black-pixel.de/schneckenhof/data/settings.json",
     }).then(res => {
       return res.data
     })

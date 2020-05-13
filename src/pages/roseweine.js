@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SubpageHeader from "../components/subpageheader"
 import WineNavigation from "../components/winenavigation"
 import Wines from "../components/wines"
-import { WineFragment } from "../fragments"
+import maintenance from "../config";
 
 const Roseweine = ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -32,15 +32,17 @@ const Roseweine = ({ location }) => {
 
           <h2>Roséweine</h2>
 
-          {
+          {!maintenance && (
+            <Wines wines={data.allWines.edges.map(edge => edge.node)} />
+          )}
+
+          {maintenance && (
             <h3>
-            Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
-            möglich sein.
+              Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
+              möglich sein.
             </h3>
-          }
-          {
-            //<Wines wines={data.allWines.edges.map(edge => edge.node)} />
-          }
+          )}
+
         </div>
       </Layout>
     </>
