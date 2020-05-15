@@ -68,7 +68,6 @@ const IndexPage = ({ i18n }) => {
                       return (
                         newsdata.node.showOnHome && (
                           <h4 key={index}
-                              style={{ display: 'none' }}
                               data-relevant-from={newsdata.node.relevantFrom}
                               data-relevant-to={newsdata.node.relevantTo}>
                             {newsdata.node.title} <br />
