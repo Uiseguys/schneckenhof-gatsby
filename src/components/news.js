@@ -23,25 +23,12 @@ const News = ({ data }) => {
             style={{ padding: "1rem 2rem" }}
             dangerouslySetInnerHTML={createMarkup(introNews[0].node.value.text)}
           ></div>
-          {/* <div style={{ padding: "1rem 2rem" }}>
-            <span style={{ textTransform: "uppercase" }}>
-              Der Blog vom Schneckenhof!
-            </span>{" "}
-            Begleiten Sie uns durch das Jahr im Weinberg und Keller, auf
-            Weinfestesten und Veranstaltungen. Auf unserem Blog informieren wir
-            Sie immer wieder was es Neues im Schneckenhof gibt:
-            <a
-              href="http://www.weingut-schneckenhof.blogspot.com/"
-              target="_blank"
-            >
-              www.weingut-schneckenhof.blogspot.com
-            </a>
-	    </div> */}
+
+          <br />
+          <h2 className='aktuelles'>Termine 2020</h2>
           <br />
           <br />
           <br />
-          <br />
-          {/* <h2 className='aktuelles'>Vorschau und Termine 2018:</h2> */}
 
           <div className="news-content">
             {news.map((newsdata, index) => {
