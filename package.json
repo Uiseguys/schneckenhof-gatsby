@@ -2,7 +2,7 @@
   "name": "schneckenhof-gatsby",
   "private": true,
   "description": "Schneckenhof ",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "engines" : { "node" : ">=10.00" },
   "dependencies": {
     "@lingui/react": "^2.8.3",
