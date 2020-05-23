@@ -13,15 +13,15 @@
   },
   {
     "id": 2,
-    "relevantFrom": "2020-03-17T00:00:00.000Z",
-    "relevantTo": "2020-05-17T00:00:00.000Z",
-    "title": "Gasthaus bleibt an Christi Himmelfahrt geschlossen - Weinausschank in der Hohenloher Scheune",
-    "shortDescription": "ab 17. März 2020 ",
-    "description": "Da wir unser gesamtes Team in der Scheune brauchen, bleibt unser Gasthaus Lamm an Christi Himmelfahrt geschlossen! Weinkauf ist nach telefonischer Vorankündigung jederzeit möglich und selbstverständlich können Sie unsere Weine auch über den Online-Shop bestellen und direkt zu sich nach hause liefern lassen.</div>",
-    "homePageDescription": "Da wir unser gesamtes Team in der Scheune brauchen, bleibt unser Gasthaus Lamm an Christi Himmelfahrt geschlossen!",
-    "showOnHome": false,
-    "startDate": "2020-05-21T00:00:00.000Z",
-    "endDate": "2020-05-21T00:00:00.000Z"
+    "relevantFrom": "2020-05-23T00:00:00.000Z",
+    "relevantTo": "2020-05-23T00:00:00.000Z",
+    "title": "Unser Gasthaus ist ab Sonntag, den 24.Mai wieder geöffnet",
+    "shortDescription": "natürlich unter Einhaltung der Hygienevorschriften",
+    "description": "Ab Sonntag dürfen wir Sie wieder in unserem Gasthaus 'zum Lamm' begrüßen. Wir besetzten zur Zeit nur jeden zweiten Tisch. Bitte reservieren Sie wenn möglich telefonisch.",
+    "homePageDescription": "Unser Gasthaus 'zum Lamm' ist ab Sonntag, den 24.Mai wieder geöffnet",
+    "showOnHome": true,
+    "startDate": "2020-05-24T00:00:00.000Z",
+    "endDate": "2020-05-24T00:00:00.000Z"
   },
   {
     "id": 1772,
@@ -91,7 +91,7 @@
     "shortDescription": "Wir geben am 20. Mai den Startschuss für die Scheunen Saison",
     "description": "Auch die Hohenloher Scheune zwischen Öhringen und Cappel darf endlich öffnen!<br>\nAm Mittwoch 20. Mai 2020 um 17 Uhr geht es los und wir vom Schneckenhof sind das Weingut, das die Scheunensaison in diesem besonderen Jahr eröffnen darf.<br>\n<br>\nÖffnungzeiten&nbsp;<b>17-21 Uhr</b>&nbsp;sowie S<b>onn- und Feiertags von 11-21 Uhr</b>.<br>\nIn der Scheune bieten wir ihnen Weine, Getränke und kleine Gerichte an.<br>\n<br>\n<b>Hygiene und Sicherheit:</b> Mit der Stadt Öhringen wurde ein Hygiene-&amp; Sicherheitskonzept im Rahmen der Corona-Verordnung und der Öffnung der Gastronomie ausgearbeitet, sodass die Gäste und Beschäftigten in der Scheune sicher sind. Es wird Einshränkungen geben, über die Sie am Eingang der Scheine jedoch ausführlich informiert werden. Bringen Sie auf jeden Fall einen Mund-Nasen-Schutz mit.<br>\nWir freuen uns, wieder ein kleines Stück Genuss und Geselligkeit zurückzubringen. Bitte haben Sie für die Maßnahmen Verständnis und nehmen Sie Rücksicht.<br>",
     "homePageDescription": "Wir schenken aus - von Mittwoch 20. bis Sonntag 24. Mai",
-    "showOnHome": true,
+    "showOnHome": false,
     "startDate": "2020-05-20T00:00:00.000Z",
     "endDate": "2020-05-24T00:00:00.000Z"
   }
