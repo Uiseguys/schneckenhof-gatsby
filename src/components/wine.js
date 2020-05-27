@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import accounting from "accounting"
 import AddToCart from "./addtocart"
 import AwardBadge from "./awardbadge"
+import { Image, Transformation } from "cloudinary-react"
 
 const priceInt = price => Math.floor(price)
 const priceDecimals = price => Math.round((price - priceInt(price)) * 100)
@@ -34,7 +35,13 @@ const Wine = ({ wine }) => (
   <div className="simpleCart_shelfItem c-wine">
     <div className="image">
       <a>
-        <img src={wine.image} />
+        <Image cloudName="schneckenhof" publicId={wine.image} secure="true">
+          <Transformation
+            width="auto"
+            height="182"
+            crop="scale"
+          ></Transformation>
+        </Image>
       </a>
     </div>
 
