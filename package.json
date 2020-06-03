@@ -3,9 +3,6 @@
   "private": true,
   "description": "Schneckenhof ",
   "version": "1.9.4",
-  "engines": {
-    "node": ">=10.00"
-  },
   "dependencies": {
     "@lingui/react": "^2.8.3",
     "accounting": "^0.4.1",
