@@ -2,7 +2,7 @@
   "name": "schneckenhof-gatsby",
   "private": true,
   "description": "Schneckenhof ",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "engines": {
     "node": ">=10.00"
   },
