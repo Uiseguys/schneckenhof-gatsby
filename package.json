@@ -17,12 +17,12 @@
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sass": "^2.1.20",
     "glamor": "^2.20.40",
-    "history": "^4.10.1",
+    "history": "^5.0.0",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.1.0",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
@@ -30,15 +30,16 @@
     "redux-persist": "^6.0.0",
     "redux-promise-middleware": "^6.1.2",
     "redux-thunk": "^2.3.0",
-    "stylelint-config-standard": "^19.0.0"
+    "stylelint-config-standard": "^20.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^7.2.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-react": "^7.16.0",
-    "prettier": "^1.18.2",
+    "prettier": "^2.0.5",
     "resolve-url-loader": "^3.1.0",
-    "stylelint": "^11.1.1"
+    "stylelint": "^11.1.1",
+    "stylint": "^2.0.0"
   },
   "keywords": [
     "gatsby"
