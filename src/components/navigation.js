@@ -11,7 +11,7 @@ const Navigation = () => (
       </li>
 
       <li className="active">
-        <a href="/shop">
+        <a href="https://nephele-s5.de/webshop/13.0/shop_core.php?user_id=X1oilwAOdeKJeYXf4OVkqA==&shop_id=X1oilwAOfu5bUG42C9AU7Q==">
           <span className="icon-i_bottles" />
           <span className="label">Shop</span>
         </a>
