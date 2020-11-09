@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { navigate } from "gatsby"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
@@ -23,33 +24,36 @@ const Rotweine = ({ location }) => {
     }
   `)
 
+  useEffect(() => {
+    navigate("/shop")
+  }, [])
+
   return (
     <>
       <SEO title="Rotweine" />
       <Layout>
-
         <div className="content-container">
           <SubpageHeader />
           <WineNavigation location={location} />
           <h2>Rotweine</h2>
 
-          {!maintenance && (
-              <Wines wines={filterPremium(data, false)} />
-          )}
+          {!maintenance && <Wines wines={filterPremium(data, false)} />}
 
           {maintenance && (
-            <h3><br /><br />
-            Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze wieder
-            möglich sein.<br /><br /><br />
+            <h3>
+              <br />
+              <br />
+              Zur Zeit ist der Shop in Wartung. Bestellungen werden in Kürze
+              wieder möglich sein.
+              <br />
+              <br />
+              <br />
             </h3>
           )}
 
-          {!maintenance && ( <h2>Premium Rotweine</h2> )}
+          {!maintenance && <h2>Premium Rotweine</h2>}
 
-          {!maintenance && (
-            <Wines wines={filterPremium(data, true)} />
-          )}
-
+          {!maintenance && <Wines wines={filterPremium(data, true)} />}
         </div>
       </Layout>
     </>

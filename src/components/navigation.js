@@ -11,7 +11,7 @@ const Navigation = () => (
       </li>
 
       <li className="active">
-        <a href="/rotweine">
+        <a href="/shop">
           <span className="icon-i_bottles" />
           <span className="label">Shop</span>
         </a>
