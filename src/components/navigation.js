@@ -18,7 +18,7 @@ const Navigation = () => (
       </li>
 
       <li>
-        <a href="/shop">
+        <a href="/weine">
           <span className="icon-i_barrels" />
           <span className="label">Wein-Kategorien</span>
         </a>
