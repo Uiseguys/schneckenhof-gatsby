@@ -25,7 +25,7 @@ const News = ({ data }) => {
           ></div>
 
           <br />
-          <h2 className='aktuelles'>Termine 2020</h2>
+          <h2 className='aktuelles'>Termine</h2>
           <br />
           <br />
           <br />
