@@ -31,7 +31,7 @@
     "cross-env": "^5.1.4",
     "cross-fetch": "^2.1.0",
     "formdata-polyfill": "^3.0.10",
-    "gatsby": "^1.9.241",
+    "gatsby": "^5.3.3",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-google-analytics": "^1.0.31",
